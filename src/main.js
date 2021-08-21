@@ -1,7 +1,7 @@
 const express = require('express');
 
 const route = express.Router();
-const customer = require('./Routes/Customer')
+const customer = require('./Routes/Customer');
 
 route.use('/', customer);
 
