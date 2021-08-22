@@ -10,7 +10,7 @@ const storages = multer.diskStorage({
 
 // hanya menerima image dengan extensi tertentu
 const filter = (req, file, cb) => {
-  if (file.mimetype === 'image/jpg' || file.mimetype === 'image/png' || file.mimetype === 'image/jpeg') {
+  if (file.mimetype == 'image/jpg' || file.mimetype == 'image/png' || file.mimetype == 'image/jpeg') {
     cb(null, true);
   } else {
     cb(null, false);
