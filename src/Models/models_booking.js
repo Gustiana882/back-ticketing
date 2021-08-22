@@ -1,14 +1,28 @@
 const { DataTypes } = require('sequelize');
 const db = require('../Config/dbConnec');
+const schedule = require('./models_schedule');
 
-class MyBooking {
+class Booking {
   constructor() {
-    this.table = db.define('myBooking', {
+    this.table = db.define('bookingTickets', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+      },
+      idSchedule: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'schedules',
+          key: 'id',
+        },
+      },
+      emailUser: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       namePerson: {
         type: DataTypes.STRING,
@@ -43,11 +57,21 @@ class MyBooking {
         allowNull: false,
       },
     });
+    this.table.belongsTo(schedule.table, {
+      foreignKey: 'idSchedule',
+      as: 'schedule',
+    });
   }
 
   getAll() {
     return new Promise((resolve, reject) => {
-      this.table.findAll()
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
+      })
         .then((result) => resolve(result))
         .catch((error) => reject(error));
     });
@@ -55,7 +79,68 @@ class MyBooking {
 
   getMyBookingById(id) {
     return new Promise((resolve, reject) => {
-      this.table.findByPk(id)
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
+        where: {
+          id,
+        },
+      })
+        .then((res) => resolve(res))
+        .catch((err) => reject(err));
+    });
+  }
+
+  getHistory() {
+    return new Promise((resolve, reject) => {
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
+      })
+        .then((res) => {
+          resolve(res);
+        }).catch((err) => {
+          console.log(err);
+          reject(err.message);
+        });
+    });
+  }
+
+  getBookingByStatusPay(status) {
+    return new Promise((resolve, reject) => {
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
+        where: {
+          statusPaymen: status,
+        },
+      })
+        .then((res) => resolve(res))
+        .catch((err) => reject(err));
+    });
+  }
+
+  getMyBookingByEmailUser(emailUser) {
+    return new Promise((resolve, reject) => {
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
+        where: {
+          emailUser,
+        },
+      })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -64,6 +149,11 @@ class MyBooking {
   getMyBookingByArrive(arrive) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
         where: {
           arrive,
         },
@@ -76,6 +166,11 @@ class MyBooking {
   getMyBookingByDeparture(departure) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
         where: {
           departure,
         },
@@ -88,6 +183,11 @@ class MyBooking {
   getMyBookingByTransit(transit) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+        }],
         where: {
           transit,
         },
@@ -129,4 +229,4 @@ class MyBooking {
   }
 }
 
-module.exports = new MyBooking();
+module.exports = new Booking();

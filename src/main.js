@@ -3,9 +3,9 @@ const express = require('express');
 const route = express.Router();
 const customer = require('./Routes/Customer');
 const admin = require('./Routes/Admin');
-const {cloudConfig} = require("./configs/cloudinary")
+const { cloudConfig } = require('./configs/cloudinary');
 
-route.use('*',cloudConfig)
+route.use('*', cloudConfig);
 
 route.use('/', customer);
 route.use('/admin', admin);
