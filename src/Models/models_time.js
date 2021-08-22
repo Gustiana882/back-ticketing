@@ -1,10 +1,10 @@
 const orm = require('../Config/dbConnec');
 const { DataTypes } = require('sequelize');
 
-class Destination {
+class Time {
     constructor() {
         this.table = orm.define(
-            'destination',
+            'time',
             {
                 id: {
                     type: DataTypes.INTEGER,
@@ -12,15 +12,15 @@ class Destination {
                     primaryKey: true,
                     autoIncrement: true,
                 },
-                kota: {
+                berangkat: {
                     type: DataTypes.STRING,
                     allowNull: false,
                 },
-                negara: {
+                tiba: {
                     type: DataTypes.STRING,
                     allowNull: false,
                 },
-                image: {
+                transit: {
                     type: DataTypes.STRING,
                     allowNull: false,
                 },
@@ -39,16 +39,16 @@ class Destination {
                 })
                 .then((res) => {
                     const productJSON = res;
-                    const dataDestination = productJSON.map((data) => {
+                    const datatime = productJSON.map((data) => {
                         const object = {
                             id: data.id,
-                            city: data.kota,
-                            country: data.negara,
-                            image: data.image,
+                            berangkat: data.berangkat,
+                            tiba: data.tiba,
+                            transit: data.transit,
                         };
                         return object;
                     });
-                    resolve(dataDestination);
+                    resolve(datatime);
                 })
                 .catch((err) => {
                     reject(err.message);
@@ -61,7 +61,7 @@ class Destination {
             this.table
                 .create(data)
                 .then((res) => {
-                    resolve('Add destination success');
+                    resolve('Add time success');
                 })
                 .catch((err) => {
                     reject(err.message);
@@ -74,9 +74,10 @@ class Destination {
             this.table
                 .update(
                     {
-                        kota: data.kota,
-                        negara: data.negara,
-                        image: data.image,
+                        id: data.id,
+                        berangkat: data.berangkat,
+                        tiba: data.tiba,
+                        transit: data.transit,
                     },
                     {
                         where: {
@@ -85,7 +86,7 @@ class Destination {
                     }
                 )
                 .then((res) => {
-                    resolve('Update destination success');
+                    resolve('Update time success');
                 })
                 .catch((err) => {
                     reject(err.message);
@@ -102,7 +103,7 @@ class Destination {
                     },
                 })
                 .then((res) => {
-                    resolve('Delete destination success');
+                    resolve('Delete time success');
                 })
                 .catch((err) => {
                     reject(err);
@@ -111,4 +112,4 @@ class Destination {
     }
 }
 
-module.exports = new Destination();
+module.exports = new Time();
