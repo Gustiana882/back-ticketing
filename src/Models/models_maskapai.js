@@ -36,7 +36,7 @@ class Maskapai {
           const dataMaskapai = productJSON.map((data) => {
             const object = {
               id: data.id,
-              images: data.images,
+              image: data.image,
               maskapai: data.nameMaskapai,
             };
             return object;
@@ -67,7 +67,7 @@ class Maskapai {
   UpdateData(data) {
     return new Promise((resolve, reject) => {
       this.table.update({
-        images: data.images,
+        image: data.image,
         nameMaskapai: data.nameMaskapai,
       }, {
         where: {
@@ -86,7 +86,7 @@ class Maskapai {
     return new Promise((resolve, reject) => {
       this.table.create(data)
         .then((res) => {
-          resolve('Add product success');
+          resolve('Add maskapai success');
         }).catch((err) => {
           reject(err.message);
         });

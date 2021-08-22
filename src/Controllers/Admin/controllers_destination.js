@@ -44,7 +44,7 @@ destination.updateData = async (req, res) => {
       negara: object.negara,
       image: urlImage || req.file.path,
     };
-    const result = await model.AddData(data);
+    const result = await model.UpdateData(data);
     return respone(res, 201, result);
   } catch (error) {
     return respone(res, 500, error);

@@ -30,6 +30,7 @@
 [34m[39m
 2021-08-22 17:59:20:5920 [34mhttp[39m: [34mPOST /login 500 97 - 108.111 ms[39m
 [34m[39m
+<<<<<<< HEAD
 2021-08-22 22:45:47:4547 [34mhttp[39m: [34mPOST /login 500 97 - 75.884 ms[39m
 [34m[39m
 2021-08-22 22:45:54:4554 [34mhttp[39m: [34mPOST /register 200 71 - 264.126 ms[39m
@@ -231,4 +232,243 @@
 2021-08-23 02:09:08:98 [34mhttp[39m: [34mGET /Tokyo 404 17 - 2.246 ms[39m
 [34m[39m
 2021-08-23 02:09:17:917 [34mhttp[39m: [34mGET /destination/Tokyo 200 103 - 75.593 ms[39m
+=======
+2021-08-23 00:04:12:412 [34mhttp[39m: [34mGET /admin/destination/all 200 45 - 54.746 ms[39m
+[34m[39m
+2021-08-23 00:09:04:94 [34mhttp[39m: [34mPOST /admin/destination/add 500 91 - 151.477 ms[39m
+[34m[39m
+2021-08-23 00:13:34:1334 [34mhttp[39m: [34mPOST /admin/destination/add 500 91 - 51.483 ms[39m
+[34m[39m
+2021-08-23 00:15:00:150 [34mhttp[39m: [34mPOST /admin/destination/add 500 94 - 84.906 ms[39m
+[34m[39m
+2021-08-23 00:15:33:1533 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2209.826 ms[39m
+[34m[39m
+2021-08-23 00:15:41:1541 [34mhttp[39m: [34mGET /admin/destination/all 200 211 - 23.323 ms[39m
+[34m[39m
+2021-08-23 00:18:30:1830 [34mhttp[39m: [34mPUT /admin/destination/update 500 88 - 1932.058 ms[39m
+[34m[39m
+2021-08-23 00:18:46:1846 [34mhttp[39m: [34mPUT /admin/destination/update 500 88 - 2228.552 ms[39m
+[34m[39m
+2021-08-23 00:21:06:216 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2340.721 ms[39m
+[34m[39m
+2021-08-23 00:21:14:2114 [34mhttp[39m: [34mGET /admin/destination/all 200 45 - 19.883 ms[39m
+[34m[39m
+2021-08-23 00:21:20:2120 [34mhttp[39m: [34mGET /admin/destination/all 200 45 - 4.097 ms[39m
+[34m[39m
+2021-08-23 00:22:27:2227 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2245.817 ms[39m
+[34m[39m
+2021-08-23 00:22:34:2234 [34mhttp[39m: [34mGET /admin/destination/all 200 211 - 6.594 ms[39m
+[34m[39m
+2021-08-23 00:23:03:233 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2452.548 ms[39m
+[34m[39m
+2021-08-23 00:23:08:238 [34mhttp[39m: [34mGET /admin/destination/all 200 217 - 5.223 ms[39m
+[34m[39m
+2021-08-23 00:23:30:2330 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2184.065 ms[39m
+[34m[39m
+2021-08-23 00:24:38:2438 [34mhttp[39m: [34mGET /admin/destination/all 200 211 - 18.911 ms[39m
+[34m[39m
+2021-08-23 00:24:50:2450 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2374.726 ms[39m
+[34m[39m
+2021-08-23 00:24:55:2455 [34mhttp[39m: [34mGET /admin/destination/all 200 378 - 5.133 ms[39m
+[34m[39m
+2021-08-23 00:25:14:2514 [34mhttp[39m: [34mDELETE /admin/destination/del/2 200 79 - 62.750 ms[39m
+[34m[39m
+2021-08-23 00:25:20:2520 [34mhttp[39m: [34mGET /admin/destination/all 200 211 - 4.863 ms[39m
+[34m[39m
+2021-08-23 00:26:19:2619 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2238.520 ms[39m
+[34m[39m
+2021-08-23 00:26:25:2625 [34mhttp[39m: [34mGET /admin/destination/all 200 386 - 5.603 ms[39m
+[34m[39m
+2021-08-23 00:31:53:3153 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 21.564 ms[39m
+[34m[39m
+2021-08-23 00:34:14:3414 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 3049.949 ms[39m
+[34m[39m
+2021-08-23 00:34:52:3452 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 2021.170 ms[39m
+[34m[39m
+2021-08-23 00:35:24:3524 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 1961.854 ms[39m
+[34m[39m
+2021-08-23 00:36:04:364 [34mhttp[39m: [34mGET /admin/maskapai/all 200 145 - 19.493 ms[39m
+[34m[39m
+2021-08-23 00:37:25:3725 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 53.110 ms[39m
+[34m[39m
+2021-08-23 00:37:33:3733 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 7.135 ms[39m
+[34m[39m
+2021-08-23 00:38:47:3847 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 2158.619 ms[39m
+[34m[39m
+2021-08-23 00:38:53:3853 [34mhttp[39m: [34mGET /admin/maskapai/all 200 215 - 7.560 ms[39m
+[34m[39m
+2021-08-23 00:39:27:3927 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 2515.960 ms[39m
+[34m[39m
+2021-08-23 00:39:36:3936 [34mhttp[39m: [34mGET /admin/maskapai/all 200 374 - 5.178 ms[39m
+[34m[39m
+2021-08-23 00:40:44:4044 [34mhttp[39m: [34mPUT /admin/destination/update 500 126 - 1900.518 ms[39m
+[34m[39m
+2021-08-23 00:41:08:418 [34mhttp[39m: [34mGET /admin/maskapai/all 200 374 - 17.011 ms[39m
+[34m[39m
+2021-08-23 00:41:20:4120 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2002.171 ms[39m
+[34m[39m
+2021-08-23 00:41:27:4127 [34mhttp[39m: [34mGET /admin/maskapai/all 200 374 - 5.038 ms[39m
+[34m[39m
+2021-08-23 00:41:37:4137 [34mhttp[39m: [34mGET /admin/maskapai/all 200 374 - 3.769 ms[39m
+[34m[39m
+2021-08-23 00:43:06:436 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2766.466 ms[39m
+[34m[39m
+2021-08-23 00:43:14:4314 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 23.876 ms[39m
+[34m[39m
+2021-08-23 00:43:19:4319 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 6.726 ms[39m
+[34m[39m
+2021-08-23 00:43:29:4329 [34mhttp[39m: [34mGET /admin/destination/all 200 45 - 8.801 ms[39m
+[34m[39m
+2021-08-23 00:44:16:4416 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 2164.838 ms[39m
+[34m[39m
+2021-08-23 00:44:22:4422 [34mhttp[39m: [34mGET /admin/maskapai/all 200 203 - 7.214 ms[39m
+[34m[39m
+2021-08-23 00:44:34:4434 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 2273.279 ms[39m
+[34m[39m
+2021-08-23 00:44:40:4440 [34mhttp[39m: [34mGET /admin/maskapai/all 200 203 - 4.875 ms[39m
+[34m[39m
+2021-08-23 00:45:12:4512 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 1824.593 ms[39m
+[34m[39m
+2021-08-23 00:45:19:4519 [34mhttp[39m: [34mGET /admin/maskapai/all 200 203 - 5.745 ms[39m
+[34m[39m
+2021-08-23 00:46:27:4627 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 2160.033 ms[39m
+[34m[39m
+2021-08-23 00:46:33:4633 [34mhttp[39m: [34mGET /admin/maskapai/all 200 203 - 38.410 ms[39m
+[34m[39m
+2021-08-23 00:46:43:4643 [34mhttp[39m: [34mPUT /admin/destination/update 201 84 - 1909.011 ms[39m
+[34m[39m
+2021-08-23 00:46:49:4649 [34mhttp[39m: [34mGET /admin/maskapai/all 200 203 - 8.748 ms[39m
+[34m[39m
+2021-08-23 00:47:58:4758 [34mhttp[39m: [34mPUT /admin/maskapai/update 201 81 - 2340.586 ms[39m
+[34m[39m
+2021-08-23 00:48:04:484 [34mhttp[39m: [34mGET /admin/maskapai/all 200 209 - 5.292 ms[39m
+[34m[39m
+2021-08-23 00:48:31:4831 [34mhttp[39m: [34mDELETE /admin/maskapai/del/1 200 76 - 64.180 ms[39m
+[34m[39m
+2021-08-23 00:48:37:4837 [34mhttp[39m: [34mGET /admin/maskapai/all 200 45 - 4.953 ms[39m
+[34m[39m
+2021-08-23 01:23:13:2313 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2716.024 ms[39m
+[34m[39m
+2021-08-23 01:23:32:2332 [34mhttp[39m: [34mPOST /admin/destination/add 201 81 - 2376.384 ms[39m
+[34m[39m
+2021-08-23 01:23:48:2348 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 1598.817 ms[39m
+[34m[39m
+2021-08-23 01:24:23:2423 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 1901.525 ms[39m
+[34m[39m
+2021-08-23 01:24:47:2447 [34mhttp[39m: [34mPOST /admin/maskapai/add 201 77 - 1803.662 ms[39m
+[34m[39m
+2021-08-23 01:26:25:2625 [34mhttp[39m: [34mGET /admin/time/all 200 45 - 42.778 ms[39m
+[34m[39m
+2021-08-23 01:28:24:2824 [34mhttp[39m: [34mPOST /admin/time/add 201 74 - 95.780 ms[39m
+[34m[39m
+2021-08-23 01:28:29:2829 [34mhttp[39m: [34mGET /admin/time/all 200 102 - 6.910 ms[39m
+[34m[39m
+2021-08-23 01:29:15:2915 [34mhttp[39m: [34mPUT /admin/bag/update 404 17 - 2.921 ms[39m
+[34m[39m
+2021-08-23 01:29:24:2924 [34mhttp[39m: [34mPUT /admin/time/update 500 88 - 32.960 ms[39m
+[34m[39m
+2021-08-23 01:30:14:3014 [34mhttp[39m: [34mPUT /admin/time/update 201 77 - 141.452 ms[39m
+[34m[39m
+2021-08-23 01:30:21:3021 [34mhttp[39m: [34mGET /admin/time/all 200 102 - 29.936 ms[39m
+[34m[39m
+2021-08-23 01:30:34:3034 [34mhttp[39m: [34mPOST /admin/time/add 201 74 - 716.097 ms[39m
+[34m[39m
+2021-08-23 01:30:49:3049 [34mhttp[39m: [34mDELETE /admin/time/del/1 500 64 - 5.149 ms[39m
+[34m[39m
+2021-08-23 01:31:30:3130 [34mhttp[39m: [34mDELETE /admin/time/del/1 200 72 - 51.890 ms[39m
+[34m[39m
+2021-08-23 01:31:37:3137 [34mhttp[39m: [34mGET /admin/time/all 200 102 - 23.802 ms[39m
+[34m[39m
+2021-08-23 01:38:24:3824 [34mhttp[39m: [34mPOST /admin/price 200 72 - 168.959 ms[39m
+[34m[39m
+2021-08-23 01:40:39:4039 [34mhttp[39m: [34mGET /admin/price_class?class_type=Economy 200 204 - 51.059 ms[39m
+[34m[39m
+2021-08-23 01:41:23:4123 [34mhttp[39m: [34mGET /admin/price_class?class_type=Economy 200 204 - 24.379 ms[39m
+[34m[39m
+2021-08-23 01:41:50:4150 [34mhttp[39m: [34mGET /admin/price?id=1 200 204 - 17.636 ms[39m
+[34m[39m
+2021-08-23 01:42:57:4257 [34mhttp[39m: [34mPUT /admin/price 200 75 - 183.616 ms[39m
+[34m[39m
+2021-08-23 01:43:05:435 [34mhttp[39m: [34mGET /admin/price?id=1 200 204 - 4.965 ms[39m
+[34m[39m
+2021-08-23 01:43:13:4313 [34mhttp[39m: [34mPOST /admin/price 200 72 - 33.222 ms[39m
+[34m[39m
+2021-08-23 01:44:47:4447 [34mhttp[39m: [34mGET /admin/schedule/all 500 254 - 17.864 ms[39m
+[34m[39m
+2021-08-23 01:52:04:524 [34mhttp[39m: [34mGET /admin/schedule/all 500 239 - 53.002 ms[39m
+[34m[39m
+2021-08-23 01:53:15:5315 [34mhttp[39m: [34mGET /admin/schedule/all 200 45 - 67.712 ms[39m
+[34m[39m
+2021-08-23 01:58:36:5836 [34mhttp[39m: [34mGET /admin/maskapai/all 200 572 - 72.496 ms[39m
+[34m[39m
+2021-08-23 01:58:53:5853 [34mhttp[39m: [34mGET /admin/destination/all 200 386 - 19.333 ms[39m
+[34m[39m
+2021-08-23 01:59:10:5910 [34mhttp[39m: [34mGET /admin/time/all 200 102 - 18.169 ms[39m
+[34m[39m
+2021-08-23 01:59:31:5931 [34mhttp[39m: [34mGET /admin/price_class?class_type=Economy 200 364 - 28.338 ms[39m
+[34m[39m
+2021-08-23 02:00:03:03 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 121.017 ms[39m
+[34m[39m
+2021-08-23 02:00:07:07 [34mhttp[39m: [34mGET /admin/schedule/all 200 891 - 55.530 ms[39m
+[34m[39m
+2021-08-23 02:02:09:29 [34mhttp[39m: [34mPOST /admin/schedule/add 500 64 - 75.848 ms[39m
+[34m[39m
+2021-08-23 02:03:10:310 [34mhttp[39m: [34mPOST /admin/schedule/add 500 64 - 58.700 ms[39m
+[34m[39m
+2021-08-23 02:03:55:355 [34mhttp[39m: [34mPOST /admin/schedule/add 500 64 - 98.611 ms[39m
+[34m[39m
+2021-08-23 02:04:39:439 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 118.008 ms[39m
+[34m[39m
+2021-08-23 02:04:49:449 [34mhttp[39m: [34mGET /admin/schedule/all 200 1738 - 94.162 ms[39m
+[34m[39m
+2021-08-23 02:06:04:64 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 311.728 ms[39m
+[34m[39m
+2021-08-23 02:06:09:69 [34mhttp[39m: [34mGET /admin/schedule/all 200 2585 - 66.380 ms[39m
+[34m[39m
+2021-08-23 02:07:42:742 [34mhttp[39m: [34mPOST /admin/schedule/add 500 64 - 71.899 ms[39m
+[34m[39m
+2021-08-23 02:09:47:947 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 359.287 ms[39m
+[34m[39m
+2021-08-23 02:09:54:954 [34mhttp[39m: [34mGET /admin/schedule/all 200 3432 - 56.435 ms[39m
+[34m[39m
+2021-08-23 02:13:27:1327 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 123.142 ms[39m
+[34m[39m
+2021-08-23 02:13:33:1333 [34mhttp[39m: [34mGET /admin/schedule/all 200 4279 - 65.713 ms[39m
+[34m[39m
+2021-08-23 02:14:11:1411 [34mhttp[39m: [34mPOST /admin/schedule/add 201 78 - 119.573 ms[39m
+[34m[39m
+2021-08-23 02:14:15:1415 [34mhttp[39m: [34mGET /admin/schedule/all 200 5130 - 64.773 ms[39m
+[34m[39m
+2021-08-23 02:19:21:1921 [34mhttp[39m: [34mPUT /admin/schedule/update 500 168 - 127.355 ms[39m
+[34m[39m
+2021-08-23 02:19:44:1944 [34mhttp[39m: [34mPUT /admin/schedule/update 500 167 - 32.332 ms[39m
+[34m[39m
+2021-08-23 02:20:20:2020 [34mhttp[39m: [34mPUT /admin/schedule/update 201 81 - 41.553 ms[39m
+[34m[39m
+2021-08-23 02:20:27:2027 [34mhttp[39m: [34mGET /admin/schedule/all 200 5103 - 73.282 ms[39m
+[34m[39m
+2021-08-23 02:21:58:2158 [34mhttp[39m: [34mDELETE /admin/schedule/del/1 200 76 - 64.106 ms[39m
+[34m[39m
+2021-08-23 02:22:04:224 [34mhttp[39m: [34mDELETE /admin/schedule/del/2 200 76 - 20.058 ms[39m
+[34m[39m
+2021-08-23 02:22:10:2210 [34mhttp[39m: [34mDELETE /admin/schedule/del/3 200 76 - 24.942 ms[39m
+[34m[39m
+2021-08-23 02:22:15:2215 [34mhttp[39m: [34mDELETE /admin/schedule/del/4 200 76 - 25.432 ms[39m
+[34m[39m
+2021-08-23 02:22:39:2239 [34mhttp[39m: [34mGET /admin/schedule/all 200 1742 - 34.423 ms[39m
+[34m[39m
+2021-08-23 02:25:12:2512 [34mhttp[39m: [34mGET /admin/bag/update 404 17 - 3.312 ms[39m
+[34m[39m
+2021-08-23 02:25:51:2551 [34mhttp[39m: [34mGET /admin/booking/history 200 45 - 30.091 ms[39m
+[34m[39m
+2021-08-23 02:26:26:2626 [34mhttp[39m: [34mGET /admin/booking/status-payment/status 400 83 - 12.834 ms[39m
+[34m[39m
+2021-08-23 02:27:45:2745 [34mhttp[39m: [34mGET /admin/booking/all 200 45 - 20.373 ms[39m
+>>>>>>> 5b7367d058bdb1af093543ee0b0e97a3bc308f5c
+[34m[39m
+2021-08-23 02:59:56:5956 [34mhttp[39m: [34mGET /my-booking 200 45 - 277.774 ms[39m
+[34m[39m
+2021-08-23 03:00:01:01 [34mhttp[39m: [34mPOST /booking 200 82 - 188.027 ms[39m
+[34m[39m
+2021-08-23 03:00:07:07 [34mhttp[39m: [34mGET /my-booking 200 45 - 13.683 ms[39m
 [34m[39m

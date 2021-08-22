@@ -31,7 +31,7 @@ route.get('/booking/history', Booking.history);
 route.get('/time/all', Time.getAll); // get all data tabel Time
 route.post('/time/add', Time.addData); // add data tabel Time
 route.put('/time/update', Time.updateData); // update data tabel Time
-route.delete('/time/del/:id_schedule', Time.removeData); // remove data tabel Time
+route.delete('/time/del/:id_time', Time.removeData); // remove data tabel Time
 
 route.post('/price', priceMethod.addPriceMaskapai);
 route.put('/price', priceMethod.updatePriceById);
