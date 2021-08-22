@@ -27,4 +27,10 @@ route.post('/time/add', Time.addData); //add data tabel Time
 route.put('/time/update', Time.updateData); //update data tabel Time
 route.delete('/time/del/:id_schedule', Time.removeData); //remove data tabel Time
 
+
+route.post('/price', priceMethod.addPriceMaskapai);
+route.put('/price', priceMethod.updatePriceById);
+route.get('/price', priceMethod.getPriceById);
+route.get('/price_class', priceMethod.getPriceByClass);
+
 module.exports = route;
