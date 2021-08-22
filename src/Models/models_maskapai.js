@@ -2,11 +2,19 @@ const {
   DataTypes, where, Op, Sequelize,
 } = require('sequelize');
 const orm = require('../Config/dbConnec');
+<<<<<<< HEAD
 const price = require('./models_price');
 
 class Maskapai {
   constructor() {
     this.table = orm.define('maskapai', {
+=======
+const price = require('./price');
+
+class Maskapai {
+  constructor() {
+    this.table = orm.define('maskapais', {
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -30,7 +38,11 @@ class Maskapai {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
+<<<<<<< HEAD
           model: 'price',
+=======
+          model: 'prices',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
           key: 'id',
         },
       },
@@ -39,7 +51,11 @@ class Maskapai {
     });
     this.table.belongsTo(price.table, {
       foreignKey: 'harga',
+<<<<<<< HEAD
       as: 'harga',
+=======
+      as: 'price',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
     });
   }
 

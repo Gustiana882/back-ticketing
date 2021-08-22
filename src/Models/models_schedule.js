@@ -8,7 +8,11 @@ const maskapai = require('./models_maskapai');
 
 class Schedule {
   constructor() {
+<<<<<<< HEAD
     this.table = orm.define('schedule', {
+=======
+    this.table = orm.define('schedules', {
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -24,7 +28,11 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
+<<<<<<< HEAD
           model: 'maskapai',
+=======
+          model: 'maskapais',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
           key: 'id',
         },
       },
@@ -33,7 +41,11 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
+<<<<<<< HEAD
           model: 'destination',
+=======
+          model: 'destinations',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
           key: 'id',
         },
       },
@@ -42,7 +54,11 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
+<<<<<<< HEAD
           model: 'destination',
+=======
+          model: 'destinations',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
           key: 'id',
         },
       },
@@ -51,7 +67,11 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
+<<<<<<< HEAD
           model: 'time',
+=======
+          model: 'times',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
           key: 'id',
         },
       },
@@ -60,6 +80,7 @@ class Schedule {
     });
     this.table.belongsTo(destination.table, {
       foreignKey: 'tujuan_awal',
+<<<<<<< HEAD
       as: 'tujuan_awal',
     });
     this.table.belongsTo(destination.table, {
@@ -73,6 +94,21 @@ class Schedule {
     this.table.belongsTo(time.table, {
       foreignKey: 'time',
       as: 'time',
+=======
+      as: 'tujuanAwal',
+    });
+    this.table.belongsTo(destination.table, {
+      foreignKey: 'tujuan_akhir',
+      as: 'tujuanAkhir',
+    });
+    this.table.belongsTo(maskapai.table, {
+      foreignKey: 'idMaskapai',
+      as: 'Maskapai',
+    });
+    this.table.belongsTo(time.table, {
+      foreignKey: 'time',
+      as: 'times',
+>>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
     });
   }
 
