@@ -5,6 +5,7 @@ const orm = require('../Config/dbConnec');
 const destination = require('./models_destination');
 const time = require('./models_time');
 const maskapai = require('./models_maskapai');
+const price = require('./price');
 
 class Schedule {
   constructor() {
@@ -25,6 +26,19 @@ class Schedule {
         onDelete: 'CASCADE',
         references: {
           model: 'maskapais',
+          key: 'id',
+        },
+      },
+      kursi: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      harga: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'prices',
           key: 'id',
         },
       },
@@ -57,6 +71,10 @@ class Schedule {
       },
     }, {
       timestamps: false,
+    });
+    this.table.belongsTo(price.table, {
+      foreignKey: 'harga',
+      as: 'price',
     });
     this.table.belongsTo(destination.table, {
       foreignKey: 'tujuan_awal',
@@ -92,6 +110,9 @@ class Schedule {
         }, {
           model: time.table,
           as: 'time',
+        }, {
+          model: price.table,
+          as: 'harga',
         }],
       })
         .then((res) => {
@@ -104,8 +125,65 @@ class Schedule {
               from: data.tujuan_awal,
               to: data.tujuan_akhir,
               time: data.time,
+              chairsAmount: data.kursi,
+              price: data.harga,
             };
             return object;
+          });
+          resolve(dataSchedule);
+        }).catch((err) => {
+          console.log(err);
+          reject(err.message);
+        });
+    });
+  }
+
+  FindTicket(req_kota_awal, req_kota_akhir, class_harga, jmlPenumpang){
+    return new Promise((resolve, reject) => {
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        include: [{
+          model: destination.table,
+          as: 'tujuan_awal',
+          where:{
+            kota:`%${req_kota_awal}%`
+        }
+        }, {
+          model: destination.table,
+          as: 'tujuan_akhir',
+          where:{
+            kota:`%${req_kota_akhir}%`
+        }
+        }, {
+          model: maskapai.table,
+          as: 'idMaskapai',
+        }, {
+          model: time.table,
+          as: 'time',
+        }, {
+          model: price.table,
+          as: 'harga',
+          where:{
+            class:`%${class_harga}%`
+        }
+        }],
+      })
+        .then((res) => {
+          const productJSON = res;
+          const dataSchedule = productJSON.map((data) => {
+            if (data.kursi >= jmlPenumpang) {
+              const object = {
+                id: data.id,
+                code: data.code,
+                idMaskapai: data.idMaskapai,
+                from: data.tujuan_awal,
+                to: data.tujuan_akhir,
+                time: data.time,
+                chairsAmount: data.kursi,
+                price: data.harga,
+              };
+              return object;
+            }
           });
           resolve(dataSchedule);
         }).catch((err) => {
@@ -137,6 +215,8 @@ class Schedule {
         from: data.tujuan_awal,
         to: data.tujuan_akhir,
         time: data.time,
+        kursi: data.kursi,
+        harga: data.harga,
       }, {
         where: {
           id: data.id,
@@ -179,6 +259,9 @@ class Schedule {
         }, {
           model: time.table,
           as: 'time',
+        }, {
+          model: price.table,
+          as: 'harga',
         }],
       })
         .then((res) => {
@@ -191,6 +274,8 @@ class Schedule {
               from: data.tujuan_awal,
               to: data.tujuan_akhir,
               time: data.time,
+              chairsAmount: data.kursi,
+              price: data.harga,
             };
             return object;
           });
