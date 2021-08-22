@@ -1,5 +1,5 @@
 const {
-  DataTypes, where, Op, Sequelize,
+  DataTypes,
 } = require('sequelize');
 const orm = require('../Config/dbConnec');
 const destination = require('./models_destination');

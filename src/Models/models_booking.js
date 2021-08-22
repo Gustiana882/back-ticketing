@@ -57,10 +57,10 @@ class Booking {
         allowNull: false,
       },
     });
-    // this.table.belongsTo(schedule.table, {
-    //   foreignKey: 'schedules',
-    //   as: 'schedule',
-    // });
+    this.table.belongsTo(schedule.table, {
+      foreignKey: 'idSchedule',
+      // as: 'Schedule',
+    });
   }
 
   getAll() {
