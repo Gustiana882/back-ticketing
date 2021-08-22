@@ -4,7 +4,7 @@ const orm = require('../Config/dbConnec');
 class Time {
   constructor() {
     this.table = orm.define(
-      'time',
+      'times',
       {
         id: {
           type: DataTypes.INTEGER,

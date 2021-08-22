@@ -6,7 +6,7 @@ const price = require('./price');
 
 class Maskapai {
   constructor() {
-    this.table = orm.define('maskapai', {
+    this.table = orm.define('maskapais', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -30,7 +30,7 @@ class Maskapai {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'price',
+          model: 'prices',
           key: 'id',
         },
       },

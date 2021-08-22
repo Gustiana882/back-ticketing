@@ -49,10 +49,10 @@ class Prices {
     });
   }
 
-  getIdMaskapai(id_Maskapai) {
+  getIdMaskapai(idMaskapai) {
     return new Promise((resolve, reject) => {
       this.table
-        .findAll({ where: { id_Maskapai } })
+        .findAll({ where: { id_Maskapai: idMaskapai } })
         .then((res) => {
           resolve(res);
         })

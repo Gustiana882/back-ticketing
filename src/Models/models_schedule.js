@@ -8,7 +8,7 @@ const maskapai = require('./models_maskapai');
 
 class Schedule {
   constructor() {
-    this.table = orm.define('schedule', {
+    this.table = orm.define('schedules', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -24,7 +24,7 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'maskapai',
+          model: 'maskapais',
           key: 'id',
         },
       },
@@ -33,7 +33,7 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'destination',
+          model: 'destinations',
           key: 'id',
         },
       },
@@ -42,7 +42,7 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'destination',
+          model: 'destinations',
           key: 'id',
         },
       },
@@ -51,7 +51,7 @@ class Schedule {
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
-          model: 'time',
+          model: 'times',
           key: 'id',
         },
       },
