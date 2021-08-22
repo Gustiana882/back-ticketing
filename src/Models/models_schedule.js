@@ -100,19 +100,19 @@ class Schedule {
         order: [['id', 'DESC']],
         include: [{
           model: destination.table,
-          as: 'tujuan_awal',
+          as: 'tujuanAwal',
         }, {
           model: destination.table,
-          as: 'tujuan_akhir',
+          as: 'tujuanAkhir',
         }, {
           model: maskapai.table,
-          as: 'idMaskapai',
+          as: 'Maskapai',
         }, {
           model: time.table,
-          as: 'time',
+          as: 'times',
         }, {
           model: price.table,
-          as: 'harga',
+          as: 'price',
         }],
       })
         .then((res) => {
@@ -121,12 +121,12 @@ class Schedule {
             const object = {
               id: data.id,
               code: data.code,
-              idMaskapai: data.idMaskapai,
-              from: data.tujuan_awal,
-              to: data.tujuan_akhir,
-              time: data.time,
+              idMaskapai: data.Maskapai,
+              from: data.tujuanAwal,
+              to: data.tujuanAkhir,
+              time: data.times,
               chairsAmount: data.kursi,
-              price: data.harga,
+              price: data.price,
             };
             return object;
           });
@@ -144,25 +144,25 @@ class Schedule {
         order: [['id', 'DESC']],
         include: [{
           model: destination.table,
-          as: 'tujuan_awal',
+          as: 'tujuanAwal',
           where:{
             kota:`%${req_kota_awal}%`
         }
         }, {
           model: destination.table,
-          as: 'tujuan_akhir',
+          as: 'tujuanAkhir',
           where:{
             kota:`%${req_kota_akhir}%`
         }
         }, {
           model: maskapai.table,
-          as: 'idMaskapai',
+          as: 'Maskapai',
         }, {
           model: time.table,
-          as: 'time',
+          as: 'times',
         }, {
           model: price.table,
-          as: 'harga',
+          as: 'price',
           where:{
             class:`%${class_harga}%`
         }
@@ -175,12 +175,12 @@ class Schedule {
               const object = {
                 id: data.id,
                 code: data.code,
-                idMaskapai: data.idMaskapai,
-                from: data.tujuan_awal,
-                to: data.tujuan_akhir,
-                time: data.time,
+                idMaskapai: data.Maskapai,
+                from: data.tujuanAwal,
+                to: data.tujuanAkhir,
+                time: data.times,
                 chairsAmount: data.kursi,
-                price: data.harga,
+                price: data.price,
               };
               return object;
             }
