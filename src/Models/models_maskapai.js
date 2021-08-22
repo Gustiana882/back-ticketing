@@ -2,7 +2,6 @@ const {
   DataTypes, where, Op, Sequelize,
 } = require('sequelize');
 const orm = require('../Config/dbConnec');
-const price = require('./price');
 
 class Maskapai {
   constructor() {
@@ -21,36 +20,16 @@ class Maskapai {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      kursi: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      harga: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'prices',
-          key: 'id',
-        },
-      },
     }, {
       timestamps: false,
     });
-    this.table.belongsTo(price.table, {
-      foreignKey: 'harga',
-      as: 'price',
-    });
+    
   }
 
   GetAll() {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
-        include: [{
-          model: price.table,
-          as: 'harga',
-        }],
       })
         .then((res) => {
           const productJSON = res;
@@ -59,8 +38,6 @@ class Maskapai {
               id: data.id,
               images: data.images,
               maskapai: data.nameMaskapai,
-              chairsAmount: data.kursi,
-              price: data.harga,
             };
             return object;
           });
@@ -92,8 +69,6 @@ class Maskapai {
       this.table.update({
         images: data.images,
         nameMaskapai: data.nameMaskapai,
-        kursi: data.kursi,
-        harga: data.harga,
       }, {
         where: {
           id: data.id,
@@ -124,10 +99,6 @@ class Maskapai {
         where: {
           id,
         },
-        include: [{
-          model: price.table,
-          as: 'harga',
-        }],
       })
         .then((res) => {
           const productJSON = res;
@@ -136,8 +107,6 @@ class Maskapai {
               id: data.id,
               images: data.images,
               maskapai: data.nameMaskapai,
-              chairsAmount: data.kursi,
-              price: data.harga,
             };
             return object;
           });

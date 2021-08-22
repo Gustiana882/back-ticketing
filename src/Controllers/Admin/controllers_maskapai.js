@@ -21,8 +21,6 @@ maskapai.addData = async (req, res) => {
     const object = await (req.body);
     const data = {
       nameMaskapai: object.nameMaskapai,
-      kursi: object.kursi,
-      harga: object.harga,
       image: urlImage || req.file.path,
     };
     const result = await model.AddData(data);
@@ -42,8 +40,6 @@ maskapai.updateData = async (req, res) => {
     const data = {
       id: object.id,
       nameMaskapai: object.nameMaskapai,
-      kursi: object.kursi,
-      harga: object.harga,
       image: urlImage || req.file.path,
     };
     const result = await model.AddData(data);
