@@ -1,4 +1,4 @@
-const MyBooking = require('./MyBooking');
+const MyBooking = require('./models_booking');
 const Time = require('./Time');
 
 const Merge = () => {

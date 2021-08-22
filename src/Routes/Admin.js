@@ -4,14 +4,10 @@ const route = express.Router();
 const Destination = require('../Controllers/Admin/controllers_destination');
 const Maskapai = require('../Controllers/Admin/controllers_maskapai');
 const Schedule = require('../Controllers/Admin/controllers_schedule');
-<<<<<<< HEAD
 const Booking = require('../Controllers/Admin/controller_booking_ticket');
 const upload = require('../Middleware/Upload');
-=======
 const Time = require('../Controllers/Admin/controllers_time');
-const upload = require('../Middleware/Upload');
 const priceMethod = require('../Controllers/Price');
->>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
 
 route.get('/destination/all', Destination.getAll); // get all data tabel Destination
 route.post('/destination/add', upload.single('image'), Destination.addData); // add data tabel Destination
@@ -28,12 +24,10 @@ route.post('/schedule/add', Schedule.addData); // add data tabel Schedule
 route.put('/schedule/update', Schedule.updateData); // update data tabel Schedule
 route.delete('/schedule/del/:id_schedule', Schedule.removeData); // remove data tabel Schedule
 
-<<<<<<< HEAD
 route.get('/booking/all', Booking.getAllBooking);
 route.get('/booking/status-payment/status', Booking.StatusPayment);
 route.get('/booking/history', Booking.history);
 
-=======
 route.get('/time/all', Time.getAll); // get all data tabel Time
 route.post('/time/add', Time.addData); // add data tabel Time
 route.put('/time/update', Time.updateData); // update data tabel Time
@@ -43,6 +37,5 @@ route.post('/price', priceMethod.addPriceMaskapai);
 route.put('/price', priceMethod.updatePriceById);
 route.get('/price', priceMethod.getPriceById);
 route.get('/price_class', priceMethod.getPriceByClass);
->>>>>>> a4639ff33fafa895ab2fe814ba345cc7aa0f45a3
 
 module.exports = route;

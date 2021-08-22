@@ -4,7 +4,7 @@ const schedule = require('./models_schedule');
 
 class Booking {
   constructor() {
-    this.table = db.define('bookingTickets', {
+    this.table = db.define('bookings', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -12,7 +12,7 @@ class Booking {
         primaryKey: true,
       },
       idSchedule: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
         references: {
@@ -57,10 +57,10 @@ class Booking {
         allowNull: false,
       },
     });
-    this.table.belongsTo(schedule.table, {
-      foreignKey: 'idSchedule',
-      as: 'schedule',
-    });
+    // this.table.belongsTo(schedule.table, {
+    //   foreignKey: 'schedules',
+    //   as: 'schedule',
+    // });
   }
 
   getAll() {
