@@ -60,4 +60,13 @@ destination.removeData = async (req, res) => {
   }
 };
 
+destination.getOther = async (req, res) => {
+  try {
+    const result = await model.GetByOther(req.params.other);
+    return respone(res, 200, result);
+  } catch (error) {
+    return respone(res, 500, error);
+  }
+};
+
 module.exports = destination;

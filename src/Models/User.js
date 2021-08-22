@@ -56,12 +56,12 @@ class Users {
   update(data) {
     return new Promise((resolve, reject) => {
       const {
-        img, name, email, phone, id, city, postcode,
+        img, name, email, address, phone, city, postcode,
       } = data;
       this.table
         .update(
           {
-            img, name, email, phone, city, postcode,
+            img, name, address, phone, city, postcode,
           },
           {
             where: {

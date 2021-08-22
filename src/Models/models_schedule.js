@@ -138,22 +138,22 @@ class Schedule {
     });
   }
 
-  FindTicket(req_kota_awal, req_kota_akhir, class_harga, jmlPenumpang){
+  FindTicket(req_kota_awal, req_kota_akhir, class_harga, jmlPenumpang) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
         include: [{
           model: destination.table,
           as: 'tujuan_awal',
-          where:{
-            kota:`%${req_kota_awal}%`
-        }
+          where: {
+            kota: `%${req_kota_awal}%`,
+          },
         }, {
           model: destination.table,
           as: 'tujuan_akhir',
-          where:{
-            kota:`%${req_kota_akhir}%`
-        }
+          where: {
+            kota: `%${req_kota_akhir}%`,
+          },
         }, {
           model: maskapai.table,
           as: 'idMaskapai',
@@ -163,9 +163,9 @@ class Schedule {
         }, {
           model: price.table,
           as: 'harga',
-          where:{
-            class:`%${class_harga}%`
-        }
+          where: {
+            class: `%${class_harga}%`,
+          },
         }],
       })
         .then((res) => {
@@ -249,19 +249,19 @@ class Schedule {
         },
         include: [{
           model: destination.table,
-          as: 'tujuan_awal',
+          as: 'tujuanAwal',
         }, {
           model: destination.table,
-          as: 'tujuan_akhir',
+          as: 'tujuanAkhir',
         }, {
           model: maskapai.table,
-          as: 'idMaskapai',
+          as: 'Maskapai',
         }, {
           model: time.table,
-          as: 'time',
+          as: 'times',
         }, {
           model: price.table,
-          as: 'harga',
+          as: 'price',
         }],
       })
         .then((res) => {

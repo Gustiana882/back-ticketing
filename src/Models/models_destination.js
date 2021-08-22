@@ -1,9 +1,9 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, Op } = require('sequelize');
 const orm = require('../Config/dbConnec');
 
 class Destination {
   constructor() {
-    this.table = orm.define('destination', {
+    this.table = orm.define('destinations', {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -31,6 +31,42 @@ class Destination {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
+      }).then((res) => {
+        const productJSON = res;
+        const dataDestination = productJSON.map((data) => {
+          const object = {
+            id: data.id,
+            city: data.kota,
+            country: data.negara,
+            image: data.image,
+          };
+          return object;
+        });
+        resolve(dataDestination);
+      }).catch((err) => {
+        reject(err.message);
+      });
+    });
+  }
+
+  GetByOther(other) {
+    return new Promise((resolve, reject) => {
+      this.table.findAll({
+        order: [['id', 'DESC']],
+        where: {
+          [Op.or]: [
+            {
+              kota: {
+                [Op.like]: `%${other}%`,
+              },
+            },
+            {
+              negara: {
+                [Op.like]: `%${other}%`,
+              },
+            },
+          ],
+        },
       }).then((res) => {
         const productJSON = res;
         const dataDestination = productJSON.map((data) => {

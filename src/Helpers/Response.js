@@ -50,6 +50,7 @@ function respon(res, status, result = '', err = false) {
   } else {
     results.status = status;
     results.description = desc;
+    results.isError = false;
     results.result = isObject(result)
       ? [result]
       : Array.isArray(result)
