@@ -30,6 +30,7 @@ loginMethod.login = async (req, res) => {
     const passDB = await usersModel.getEmail(req.body.email);
     const passUser = req.body.password;
     const check = await bcrypt.compare(passUser, passDB[0].password);
+    console.log(check);
     if (check) {
       const result = await token(req.body.email);
       return response(res, 200, result);

@@ -50,6 +50,10 @@ class Users {
         type: DataTypes.STRING,
         allowNullL: true,
       },
+      roles: {
+        type: DataTypes.STRING,
+        allowNullL: true,
+      },
     });
   }
 
