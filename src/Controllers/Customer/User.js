@@ -1,10 +1,13 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-unused-expressions */
 const usersMethod = {};
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+// const bcrypt = require('bcrypt');
+// const jwt = require('jsonwebtoken');
 const usersModel = require('../../Models/User');
 const response = require('../../Helpers/Response');
-const { uploadsUser } = require('../../Helpers/UploadCloud');
+// const { uploadsUser } = require('../../Helpers/UploadCloud');
 const hash = require('../../Helpers/Hash');
+const decode = require('../../Helpers/DecodeToken');
 
 usersMethod.registerUser = async (req, res) => {
   try {
@@ -49,6 +52,18 @@ usersMethod.updateProfile = async (req, res) => {
   } catch (error) {
     console.log(error);
     response(res, 400, error);
+  }
+};
+
+usersMethod.getUserProfile = async (req, res) => {
+  try {
+    const result = await usersModel.getEmail(token.params.email);
+    result
+      ? response(res, 200, result)
+      : response(res, 400, { msg: 'email not found' });
+  } catch (error) {
+    console.log(error);
+    response(res, 400, { msg: 'email not found' });
   }
 };
 

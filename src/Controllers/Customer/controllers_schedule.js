@@ -13,23 +13,23 @@ schedule.getAll = async (req, res) => {
 
 schedule.getByID = async (req, res) => {
   try {
-      const result = await model.GetbyID(req.params.id_schedule)
-      return respone(res, 200, result)
+    const result = await model.GetbyID(req.params.id_schedule);
+    return respone(res, 200, result);
   } catch (error) {
-      console.log(error)
-      return respone(res, 500, error)
+    console.log(error);
+    return respone(res, 500, error);
   }
 };
 
 schedule.findTicket = async (req, res) => {
   try {
-      const result = await model.FindTicket(req.query.kota_awal,req.query.kota_akhir,req.query.class_harga,req.query.jmlPenumpang)
-      return respone(res, 200, result)
+    const result = await model.FindTicket(req.query.from, req.query.to, req.query.price);
+    return respone(res, 200, result);
   } catch (error) {
-      console.log(error)
-      return respone(res, 500, error)
+    console.log(error);
+    return respone(res, 500, error);
   }
-}
+};
 
 schedule.updateData = async (req, res) => {
   try {

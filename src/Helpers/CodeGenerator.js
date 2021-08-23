@@ -1,9 +1,10 @@
-async function generateCode(kodenegaraasal) {
+function generateCode(kodenegaraasal) {
   try {
     const arrnumber = '0123456789'.split('');
     const string = 'abcdefghijklmnopqrstuvwxyz';
     const arrupstring = string.toUpperCase().split('');
-    let newPass = `${kodenegaraasal}-`;
+    let awal = `${kodenegaraasal}-`;
+    let newPass = [];
     let num;
     let upstr;
     let rand;
@@ -11,10 +12,11 @@ async function generateCode(kodenegaraasal) {
       num = Math.floor(Math.random() * 9);
       upstr = Math.floor(Math.random() * 25);
       rand = (arrupstring[upstr] + arrnumber[num]).split('');
-      newPass += rand[Math.floor(Math.random() * 3)];
+      newPass = newPass + rand[Math.floor(Math.random() * 2)];
     }
     const result = newPass.slice(0, 8);
-    return result;
+    const akhir = awal+result;
+    return akhir;
   } catch (error) {
     throw error;
   }

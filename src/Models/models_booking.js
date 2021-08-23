@@ -14,11 +14,6 @@ class Booking {
       idSchedule: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'schedules',
-          key: 'id',
-        },
       },
       emailUser: {
         type: DataTypes.STRING,
@@ -57,20 +52,12 @@ class Booking {
         allowNull: false,
       },
     });
-    this.table.belongsTo(schedule.table, {
-      foreignKey: 'idSchedule',
-      // as: 'Schedule',
-    });
   }
 
   getAll() {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
       })
         .then((result) => resolve(result))
         .catch((error) => reject(error));
@@ -133,10 +120,6 @@ class Booking {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
         where: {
           emailUser,
         },

@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon ./server.js",
+    "test": "APP_STATUS=test jest --verbose",
+    "watch": "jest --watch --verbose",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
@@ -22,6 +24,7 @@
     "object-checker": "^1.0.20",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5",
+    "supertest": "^6.1.6",
     "winston": "^3.3.3"
   },
   "devDependencies": {

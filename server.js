@@ -2,7 +2,7 @@ const server = require('./app');
 const db = require('./src/Config/dbConnec');
 
 const PORT = 8000;
-const orm = require('./src/Config/dbConnec');
+// const orm = require('./src/Config/dbConnec');
 
 const run = async () => {
   try {

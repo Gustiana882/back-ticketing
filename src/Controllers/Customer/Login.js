@@ -12,7 +12,7 @@ const token = async (email) => {
       user: email,
       role: 'customer',
     };
-    const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1h' });
+    const token = jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1d' });
     const result = {
       token,
       msg: 'Login Success',
