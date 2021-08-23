@@ -55,24 +55,28 @@ class Users {
 
   update(data) {
     return new Promise((resolve, reject) => {
-      const {
-        img, name, email, phone, id, city, postcode,
-      } = data;
+      const { image, name, email, phone, id, city, postcode, address } = data;
       this.table
         .update(
           {
-            img, name, email, phone, city, postcode,
+            image,
+            name,
+            email,
+            phone,
+            city,
+            postcode,
+            address,
           },
           {
             where: {
               email,
             },
-          },
+          }
         )
-        .then((res) => {
-          resolve({ msg: 'Profile updated' });
+        .then(res => {
+          resolve(data);
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });
@@ -83,10 +87,10 @@ class Users {
       const { name, email, password } = data;
       this.table
         .create({ name, email, password })
-        .then((res) => {
+        .then(res => {
           resolve({ msg: 'register success' });
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });
@@ -96,10 +100,10 @@ class Users {
     return new Promise((resolve, reject) => {
       this.table
         .findAll({ where: { id } })
-        .then((res) => {
+        .then(res => {
           resolve(res);
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });
@@ -109,10 +113,10 @@ class Users {
     return new Promise((resolve, reject) => {
       this.table
         .findAll()
-        .then((res) => {
+        .then(res => {
           resolve(res);
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });
@@ -122,10 +126,10 @@ class Users {
     return new Promise((resolve, reject) => {
       this.table
         .findAll({ where: { email } })
-        .then((res) => {
+        .then(res => {
           resolve(res);
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });

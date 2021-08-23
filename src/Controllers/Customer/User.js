@@ -27,17 +27,14 @@ usersMethod.registerUser = async (req, res) => {
 
 usersMethod.updateProfile = async (req, res) => {
   try {
-    // const check = await usersModel.getId(req.body.email);
-
-    // let urlImage = '';
-    // const dummyImg =
-    // 	'https://res.cloudinary.com/calvin-cloud/image/upload/v1626501995/users/user_meodkb.png';
-    // if (check.length <= 0) {
-    // 	return response(res, 400, { msg: 'Update error wrong id' });
-    // } else if (req.file !== undefined) {
-    // 	urlImage = await uploadsUser(req.file.path);
-    // }
+    let urlImage = '';
+    const dummyImg =
+      'https://res.cloudinary.com/calvin-cloud/image/upload/v1626501995/users/user_meodkb.png';
+    if (req.file !== undefined) {
+      urlImage = await uploadsUser(req.file.path);
+    }
     const data = {
+      image: urlImage,
       id: req.body.id,
       name: req.body.name,
       email: req.body.email,
@@ -47,6 +44,7 @@ usersMethod.updateProfile = async (req, res) => {
       postcode: req.body.postcode,
     };
     const result = await usersModel.update(data);
+    console.log(result);
     response(res, 200, result);
   } catch (error) {
     console.log(error);
@@ -56,7 +54,7 @@ usersMethod.updateProfile = async (req, res) => {
 
 usersMethod.getUser = async (req, res) => {
   try {
-    const result = await usersModel.getEmail(req.body.email);
+    const result = await usersModel.getEmail(req.params.email);
     result
       ? response(res, 200, result)
       : response(res, 400, { msg: 'email not found' });
