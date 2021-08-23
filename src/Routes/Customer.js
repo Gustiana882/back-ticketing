@@ -16,8 +16,10 @@ route.get('/user/:email', usersMethod.getUser);
 route.get('/my-booking', Booking.getMyBooking);
 route.post('/booking', Booking.BookingTicket);
 
-route.get('/profile/:email', usersMethod.getUserProfile);
-route.put('/profile', validate('customer'), usersMethod.updateProfile);
+// route.get('/', Home);
+route.get('/user/:email', validate('customer'), usersMethod.getUser);
+route.post('/login', loginMethod.login);
+route.put('/profile/:email', validate('customer'), usersMethod.updateProfile);
 
 // find ticket
 
