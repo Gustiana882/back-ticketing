@@ -73,7 +73,7 @@ controler.getMyBooking = async (req, res) => {
     const token = await decode(req.headers.token);
     const result = await model.getMyBookingByEmailUser(token.user);
     const schedules = await schedule.GetbyID(result[0].idSchedule);
-    result.map((data, i) => {
+    const detail = result.map((data) => {
       const obj = {
         id: data.id,
         emailUser: data.emailPerson,
@@ -87,10 +87,11 @@ controler.getMyBooking = async (req, res) => {
         statusPaymen: data.statusPaymen,
         createdAt: data.createdAt,
         updatedAt: data.updatedAt,
-      }
-    })
+      };
+      return obj;
+    });
     if (result) {
-      response(res, 200, schedule);
+      response(res, 200, [{ ...detail[0], ...schedules[0].dataValues }]);
     }
   } catch (error) {
     response(res, 400, { msg: error }, true);

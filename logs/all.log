@@ -472,3 +472,159 @@
 [34m[39m
 2021-08-23 03:00:07:07 [34mhttp[39m: [34mGET /my-booking 200 45 - 13.683 ms[39m
 [34m[39m
+2021-08-23 03:06:17:617 [34mhttp[39m: [34mGET /schedule/all 200 472 - 88.288 ms[39m
+[34m[39m
+2021-08-23 03:06:45:645 [34mhttp[39m: [34mGET /my-booking 200 45 - 24.450 ms[39m
+[34m[39m
+2021-08-23 03:08:26:826 [34mhttp[39m: [34mGET /my-booking 200 45 - 20.629 ms[39m
+[34m[39m
+2021-08-23 03:09:59:959 [34mhttp[39m: [34mGET /my-booking 200 135 - 36.302 ms[39m
+[34m[39m
+2021-08-23 03:12:44:1244 [34mhttp[39m: [34mGET /bag/all 404 17 - 1.345 ms[39m
+[34m[39m
+2021-08-23 03:13:06:136 [34mhttp[39m: [34mGET /my-booking 200 135 - 28.206 ms[39m
+[34m[39m
+2021-08-23 07:01:15:115 [34mhttp[39m: [34mGET /my-booking 200 135 - 49.630 ms[39m
+[34m[39m
+2021-08-23 07:01:23:123 [34mhttp[39m: [34mGET /my-booking 200 135 - 24.684 ms[39m
+[34m[39m
+2021-08-23 07:03:59:359 [34mhttp[39m: [34mGET /my-booking 200 135 - 34.950 ms[39m
+[34m[39m
+2021-08-23 07:04:17:417 [34mhttp[39m: [34mGET /my-booking 200 135 - 35.190 ms[39m
+[34m[39m
+2021-08-23 07:04:33:433 [34mhttp[39m: [34mGET /my-booking 200 135 - 28.705 ms[39m
+[34m[39m
+2021-08-23 07:04:53:453 [34mhttp[39m: [34mGET /my-booking 200 135 - 39.981 ms[39m
+[34m[39m
+2021-08-23 07:05:20:520 [34mhttp[39m: [34mGET /my-booking 200 135 - 37.161 ms[39m
+[34m[39m
+2021-08-23 07:10:15:1015 [34mhttp[39m: [34mGET /search 500 105 - 138.030 ms[39m
+[34m[39m
+2021-08-23 07:10:53:1053 [34mhttp[39m: [34mGET /search 200 45 - 22.946 ms[39m
+[34m[39m
+2021-08-23 07:11:39:1139 [34mhttp[39m: [34mGET /search 500 229 - 18.697 ms[39m
+[34m[39m
+2021-08-23 07:12:23:1223 [34mhttp[39m: [34mGET /search 500 105 - 48.983 ms[39m
+[34m[39m
+2021-08-23 07:13:29:1329 [34mhttp[39m: [34mGET /search 500 105 - 33.530 ms[39m
+[34m[39m
+2021-08-23 07:17:19:1719 [34mhttp[39m: [34mGET /search 500 105 - 30.172 ms[39m
+[34m[39m
+2021-08-23 07:21:39:2139 [34mhttp[39m: [34mGET /search 200 45 - 33.053 ms[39m
+[34m[39m
+2021-08-23 07:22:01:221 [34mhttp[39m: [34mGET /search?city=Tokyo 200 45 - 18.062 ms[39m
+[34m[39m
+2021-08-23 07:22:37:2237 [34mhttp[39m: [34mGET /search?city=Tokyo 200 45 - 37.020 ms[39m
+[34m[39m
+2021-08-23 07:23:59:2359 [34mhttp[39m: [34mGET /search?city=Tokyo 500 99 - 49.292 ms[39m
+[34m[39m
+2021-08-23 07:24:26:2426 [34mhttp[39m: [34mGET /search?city=Tokyo 200 546 - 43.416 ms[39m
+[34m[39m
+2021-08-23 07:28:06:286 [34mhttp[39m: [34mGET /search?city=Tokyo 200 45 - 35.453 ms[39m
+[34m[39m
+2021-08-23 07:28:24:2824 [34mhttp[39m: [34mGET /search?city=Tokyo 200 546 - 33.748 ms[39m
+[34m[39m
+2021-08-23 07:29:43:2943 [34mhttp[39m: [34mGET /search?city=Tokyo 200 45 - 26.379 ms[39m
+[34m[39m
+2021-08-23 07:29:55:2955 [34mhttp[39m: [34mGET /search?city=Tokyo 200 546 - 33.794 ms[39m
+[34m[39m
+2021-08-23 07:30:32:3032 [34mhttp[39m: [34mGET /search?city=Tokyo 500 108 - 91.339 ms[39m
+[34m[39m
+2021-08-23 07:31:11:3111 [34mhttp[39m: [34mGET /search?city=Tokyo 500 115 - 42.792 ms[39m
+[34m[39m
+2021-08-23 07:31:20:3120 [34mhttp[39m: [34mGET /search?city=Tokyo 200 546 - 36.801 ms[39m
+[34m[39m
+2021-08-23 07:33:08:338 [34mhttp[39m: [34mGET /my-booking 200 135 - 49.632 ms[39m
+[34m[39m
+2021-08-23 07:33:41:3341 [34mhttp[39m: [34mGET /my-booking 200 135 - 26.806 ms[39m
+[34m[39m
+2021-08-23 07:33:45:3345 [34mhttp[39m: [34mGET /my-booking 200 135 - 16.395 ms[39m
+[34m[39m
+2021-08-23 07:34:30:3430 [34mhttp[39m: [34mGET /my-booking 200 135 - 38.795 ms[39m
+[34m[39m
+2021-08-23 07:35:27:3527 [34mhttp[39m: [34mGET /my-booking 200 135 - 38.287 ms[39m
+[34m[39m
+2021-08-23 07:36:04:364 [34mhttp[39m: [34mGET /my-booking 200 546 - 36.195 ms[39m
+[34m[39m
+2021-08-23 07:36:20:3620 [34mhttp[39m: [34mGET /my-booking 200 546 - 37.309 ms[39m
+[34m[39m
+2021-08-23 07:40:14:4014 [34mhttp[39m: [34mGET /my-booking 200 546 - 46.318 ms[39m
+[34m[39m
+2021-08-23 07:40:33:4033 [34mhttp[39m: [34mGET /search?city=Tokyo 200 1050 - 28.639 ms[39m
+[34m[39m
+2021-08-23 07:43:48:4348 [34mhttp[39m: [34mGET /search?city=Tokyo 200 546 - 37.917 ms[39m
+[34m[39m
+2021-08-23 07:52:37:5237 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Jakarta&price=100 500 105 - 45.754 ms[39m
+[34m[39m
+2021-08-23 07:52:57:5257 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Jakarta&price=100 200 45 - 31.416 ms[39m
+[34m[39m
+2021-08-23 07:53:37:5337 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Jakarta&price=Economy 500 105 - 49.520 ms[39m
+[34m[39m
+2021-08-23 07:53:57:5357 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 500 105 - 22.298 ms[39m
+[34m[39m
+2021-08-23 07:54:39:5439 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 22.569 ms[39m
+[34m[39m
+2021-08-23 07:55:23:5523 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 500 99 - 33.757 ms[39m
+[34m[39m
+2021-08-23 07:55:56:5556 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 1050 - 28.120 ms[39m
+[34m[39m
+2021-08-23 07:56:16:5616 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 500 105 - 36.329 ms[39m
+[34m[39m
+2021-08-23 07:57:03:573 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 500 105 - 39.232 ms[39m
+[34m[39m
+2021-08-23 07:57:17:5717 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 30.223 ms[39m
+[34m[39m
+2021-08-23 07:57:32:5732 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 27.229 ms[39m
+[34m[39m
+2021-08-23 07:57:49:5749 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 24.033 ms[39m
+[34m[39m
+2021-08-23 07:57:59:5759 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 500 99 - 39.000 ms[39m
+[34m[39m
+2021-08-23 07:58:27:5827 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 24.853 ms[39m
+[34m[39m
+2021-08-23 08:00:06:06 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 45 - 37.935 ms[39m
+[34m[39m
+2021-08-23 08:00:51:051 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 1050 - 29.816 ms[39m
+[34m[39m
+2021-08-23 08:01:29:129 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 1050 - 40.697 ms[39m
+[34m[39m
+2021-08-23 08:01:49:149 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 1050 - 31.973 ms[39m
+[34m[39m
+2021-08-23 08:02:09:29 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 546 - 28.170 ms[39m
+[34m[39m
+2021-08-23 08:03:06:36 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 546 - 31.320 ms[39m
+[34m[39m
+2021-08-23 08:08:19:819 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 513 - 44.733 ms[39m
+[34m[39m
+2021-08-23 08:08:51:851 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 494 - 37.693 ms[39m
+[34m[39m
+2021-08-23 08:09:12:912 [34mhttp[39m: [34mGET /search?from=Tokyo&to=Tokyo&price=Economy 200 479 - 32.872 ms[39m
+[34m[39m
+2021-08-23 08:09:58:958 [34mhttp[39m: [34mGET /my-booking 200 546 - 32.284 ms[39m
+[34m[39m
+2021-08-23 08:10:20:1020 [34mhttp[39m: [34mGET /my-booking 200 479 - 41.730 ms[39m
+[34m[39m
+2021-08-23 08:11:43:1143 [34mhttp[39m: [34mGET /my-booking 200 1397 - 36.685 ms[39m
+[34m[39m
+2021-08-23 08:12:06:126 [34mhttp[39m: [34mGET /my-booking 400 79 - 37.356 ms[39m
+[34m[39m
+2021-08-23 08:12:16:1216 [34mhttp[39m: [34mGET /my-booking 200 1397 - 49.616 ms[39m
+[34m[39m
+2021-08-23 08:12:31:1231 [34mhttp[39m: [34mGET /my-booking 400 79 - 41.276 ms[39m
+[34m[39m
+2021-08-23 08:12:48:1248 [34mhttp[39m: [34mGET /my-booking 200 1397 - 40.558 ms[39m
+[34m[39m
+2021-08-23 08:13:08:138 [34mhttp[39m: [34mGET /my-booking 200 783 - 45.082 ms[39m
+[34m[39m
+2021-08-23 08:13:23:1323 [34mhttp[39m: [34mGET /my-booking 200 783 - 45.518 ms[39m
+[34m[39m
+2021-08-23 08:14:05:145 [34mhttp[39m: [34mGET /my-booking 200 783 - 48.705 ms[39m
+[34m[39m
+2021-08-23 08:14:22:1422 [34mhttp[39m: [34mGET /my-booking 400 79 - 46.849 ms[39m
+[34m[39m
+2021-08-23 08:14:49:1449 [34mhttp[39m: [34mGET /my-booking 400 79 - 53.770 ms[39m
+[34m[39m
+2021-08-23 08:17:34:1734 [34mhttp[39m: [34mGET /my-booking 200 783 - 44.209 ms[39m
+[34m[39m
+2021-08-23 08:19:01:191 [34mhttp[39m: [34mGET /my-booking 200 770 - 40.440 ms[39m
+[34m[39m

@@ -32,5 +32,6 @@ route.get('/destination/:other', Destination.getOther);
 route.get('/schedule/:id_schedule', Schedule.getByID);
 route.get('/schedule/update', Schedule.updateData);
 route.get('/schedule/searchticket', Schedule.findTicket);
+route.get('/search', Schedule.findTicket);
 
 module.exports = route;
