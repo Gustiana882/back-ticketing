@@ -40,11 +40,10 @@ usersMethod.updateProfile = async (req, res) => {
     // } else if (req.file !== undefined) {
     // urlImage = await uploadsUser(req.file.path);
     // }
-    const token = await decode(req.headers.token);
     const data = {
       id: req.body.id,
       name: req.body.name,
-      email: token.user,
+      email: req.body.email,
       address: req.body.address,
       phone: req.body.phone,
       city: req.body.city,
@@ -60,8 +59,7 @@ usersMethod.updateProfile = async (req, res) => {
 
 usersMethod.getUserProfile = async (req, res) => {
   try {
-    const token = await decode(req.headers.token);
-    const result = await usersModel.getEmail(token.user);
+    const result = await usersModel.getEmail(token.params.email);
     result ? response(res, 200, result) : response(res, 400, { msg: 'email not found' });
   } catch (error) {
     console.log(error);
