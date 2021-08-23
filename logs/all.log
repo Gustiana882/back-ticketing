@@ -8768,3 +8768,29 @@
 [34m[39m
 2021-08-23 21:35:54:3554 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 200 355 - 3384.584 ms[39m
 [34m[39m
+2021-08-24 00:11:15:1115 [34mhttp[39m: [34mGET /booking/history 404 17 - 37.820 ms[39m
+[34m[39m
+2021-08-24 00:11:24:1124 [34mhttp[39m: [34mGET /booking/history 404 17 - 5.271 ms[39m
+[34m[39m
+2021-08-24 00:12:27:1227 [34mhttp[39m: [34mGET /booking/history 404 17 - 1.753 ms[39m
+[34m[39m
+2021-08-24 00:12:31:1231 [34mhttp[39m: [34mGET /booking/all 404 17 - 0.938 ms[39m
+[34m[39m
+2021-08-24 00:12:56:1256 [34mhttp[39m: [34mGET /admin/booking/all 200 45 - 41.558 ms[39m
+[34m[39m
+2021-08-24 00:13:01:131 [34mhttp[39m: [34mGET /admin/booking/status-payment/status 400 118 - 13.292 ms[39m
+[34m[39m
+2021-08-24 00:13:36:1336 [34mhttp[39m: [34mGET /admin/booking/status-payment/status 400 118 - 73.415 ms[39m
+[34m[39m
+2021-08-24 01:04:17:417 [34mhttp[39m: [34mPOST //login 404 17 - 45.692 ms[39m
+[34m[39m
+2021-08-24 01:04:23:423 [34mhttp[39m: [34mPOST //login 404 17 - 3.810 ms[39m
+[34m[39m
+2021-08-24 01:04:39:439 [34mhttp[39m: [34mPOST /login 500 113 - 37.963 ms[39m
+[34m[39m
+2021-08-24 01:09:14:914 [34mhttp[39m: [34mPOST /register 400 70 - 25.986 ms[39m
+[34m[39m
+2021-08-24 01:09:35:935 [34mhttp[39m: [34mPOST /register 200 87 - 285.141 ms[39m
+[34m[39m
+2021-08-24 01:09:58:958 [34mhttp[39m: [34mPOST /login 200 304 - 120.748 ms[39m
+[34m[39m
