@@ -12,7 +12,7 @@ const Destination = require('../Controllers/Admin/controllers_destination');
 route.post('/login', loginMethod.login);
 route.post('/register', usersMethod.registerUser);
 
-route.get('/user', usersMethod.getUser);
+route.get('/user/:email', usersMethod.getUser);
 route.get('/my-booking', Booking.getMyBooking);
 route.post('/booking', Booking.BookingTicket);
 
