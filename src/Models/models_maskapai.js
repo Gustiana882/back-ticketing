@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
 const {
   DataTypes, where, Op, Sequelize,
 } = require('sequelize');
@@ -23,7 +26,6 @@ class Maskapai {
     }, {
       timestamps: false,
     });
-    
   }
 
   GetAll() {
@@ -43,7 +45,6 @@ class Maskapai {
           });
           resolve(dataMaskapai);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });

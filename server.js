@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const server = require('./app');
 const db = require('./src/Config/dbConnec');
 

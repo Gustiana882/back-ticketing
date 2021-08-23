@@ -93,6 +93,5 @@ const standarCustomerProfile = {
   },
   price: {
     class: expect.any(String),
-
-  }
+  },
 };

@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
 const {
   DataTypes,
 } = require('sequelize');
@@ -132,7 +135,6 @@ class Schedule {
           });
           resolve(dataSchedule);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });
@@ -155,7 +157,7 @@ class Schedule {
           model: destination.table,
           as: 'tujuanAkhir',
           where: {
-            kota: req_kota_awal,
+            kota: req_kota_akhir,
           },
         }, {
           model: maskapai.table,
@@ -174,7 +176,6 @@ class Schedule {
         .then((res) => {
           resolve(res);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });
@@ -207,7 +208,6 @@ class Schedule {
         .then((res) => {
           resolve(res);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });
@@ -240,13 +240,12 @@ class Schedule {
         .then((res) => {
           resolve(res);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });
   }
 
-  FindTicketMaskapai(maskapai) {
+  FindTicketMaskapai(nama_maskapai) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
@@ -260,7 +259,7 @@ class Schedule {
           model: maskapai.table,
           as: 'Maskapai',
           where: {
-            kota: maskapai,
+            nameMaskapai: nama_maskapai,
           },
         }, {
           model: time.table,
@@ -273,7 +272,6 @@ class Schedule {
         .then((res) => {
           resolve(res);
         }).catch((err) => {
-          console.log(err);
           reject(err.message);
         });
     });

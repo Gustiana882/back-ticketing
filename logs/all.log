@@ -8736,3 +8736,35 @@
 [34m[39m
 2021-08-23 11:43:26:4326 [34mhttp[39m: [34mPUT /profile/calvin@yahoo.com 400 70 - 1.712 ms[39m
 [34m[39m
+2021-08-23 21:05:11:511 [34mhttp[39m: [34mPOST /register 400 70 - 44.752 ms[39m
+[34m[39m
+2021-08-23 21:05:47:547 [34mhttp[39m: [34mPOST /register 200 87 - 433.405 ms[39m
+[34m[39m
+2021-08-23 21:07:53:753 [34mhttp[39m: [34mPOST /login 500 113 - 23.852 ms[39m
+[34m[39m
+2021-08-23 21:08:21:821 [34mhttp[39m: [34mPOST /login 200 309 - 256.802 ms[39m
+[34m[39m
+2021-08-23 21:10:15:1015 [34mhttp[39m: [34mGET /user/marcus@yahoo.com 200 346 - 19.272 ms[39m
+[34m[39m
+2021-08-23 21:15:08:158 [34mhttp[39m: [34mPOST /profile/marcus@yahoo.com 404 17 - 3.242 ms[39m
+[34m[39m
+2021-08-23 21:16:24:1624 [34mhttp[39m: [34mPOST /profile/marcus@yahoo.com 404 17 - 2.322 ms[39m
+[34m[39m
+2021-08-23 21:16:58:1658 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 16.172 ms[39m
+[34m[39m
+2021-08-23 21:17:47:1747 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 52.498 ms[39m
+[34m[39m
+2021-08-23 21:24:30:2430 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 36.377 ms[39m
+[34m[39m
+2021-08-23 21:25:30:2530 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 61.276 ms[39m
+[34m[39m
+2021-08-23 21:26:20:2620 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 120.050 ms[39m
+[34m[39m
+2021-08-23 21:31:07:317 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 14.693 ms[39m
+[34m[39m
+2021-08-23 21:32:55:3255 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 400 70 - 77.190 ms[39m
+[34m[39m
+2021-08-23 21:35:29:3529 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 200 327 - 3033.147 ms[39m
+[34m[39m
+2021-08-23 21:35:54:3554 [34mhttp[39m: [34mPUT /profile/marcus@yahoo.com 200 355 - 3384.584 ms[39m
+[34m[39m

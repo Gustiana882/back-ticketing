@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
 const { DataTypes } = require('sequelize');
 const sequelize = require('../Config/dbConnec');
 
@@ -85,7 +88,6 @@ class Prices {
           id_Maskapai, dewasa, anak, class_type,
         })
         .then((res) => {
-          console.log(data);
           resolve({ msg: 'add price success' });
         })
         .catch((err) => {
@@ -107,7 +109,6 @@ class Prices {
           },
         )
         .then((res) => {
-          console.log(data);
           resolve({ msg: 'update price success' });
         })
         .catch((err) => {

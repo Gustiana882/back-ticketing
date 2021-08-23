@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-useless-catch */
+
 const bcrypt = require('bcrypt');
 
 const saltrounds = 10;

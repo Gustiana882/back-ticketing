@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
 const { DataTypes, Op } = require('sequelize');
 const orm = require('../Config/dbConnec');
 

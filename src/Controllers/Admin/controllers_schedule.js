@@ -36,7 +36,7 @@ schedule.updateData = async (req, res) => {
   try {
     const object = await (req.body);
     const data = {
-      id : object.id,
+      id: object.id,
       idMaskapai: object.idMaskapai,
       tujuan_awal: object.tujuan_awal,
       tujuan_akhir: object.tujuan_akhir,
@@ -62,12 +62,11 @@ schedule.removeData = async (req, res) => {
 
 schedule.getByID = async (req, res) => {
   try {
-      const result = await model.GetbyID(req.params.id_schedule)
-      return respone(res, 200, result)
+    const result = await model.GetbyID(req.params.id_schedule);
+    return respone(res, 200, result);
   } catch (error) {
-      console.log(error)
-      return respone(res, 500, error)
+    return respone(res, 500, error);
   }
-}
+};
 
 module.exports = schedule;

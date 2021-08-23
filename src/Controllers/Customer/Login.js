@@ -1,4 +1,6 @@
 /* eslint-disable no-useless-catch */
+/* eslint-disable consistent-return */
+
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -6,7 +8,7 @@ const loginMethod = {};
 const usersModel = require('../../Models/User');
 const response = require('../../Helpers/Response');
 
-const token = async (email) => {
+const tokenAuth = async (email) => {
   try {
     const payload = {
       user: email,
@@ -30,13 +32,11 @@ loginMethod.login = async (req, res) => {
     const passDB = await usersModel.getEmail(req.body.email);
     const passUser = req.body.password;
     const check = await bcrypt.compare(passUser, passDB[0].password);
-    console.log(check);
     if (check) {
-      const result = await token(req.body.email);
+      const result = await tokenAuth(req.body.email);
       return response(res, 200, result);
     }
   } catch (error) {
-    console.log(error);
     response(res, 500, { msg: 'wrong password or email' });
   }
 };
