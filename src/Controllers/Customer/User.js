@@ -57,7 +57,7 @@ usersMethod.updateProfile = async (req, res) => {
 
 usersMethod.getUserProfile = async (req, res) => {
   try {
-    const result = await usersModel.getEmail(token.params.email);
+    const result = await usersModel.getEmail(req.params.email);
     result
       ? response(res, 200, result)
       : response(res, 400, { msg: 'email not found' });

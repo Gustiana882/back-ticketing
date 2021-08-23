@@ -23,7 +23,6 @@ class Maskapai {
     }, {
       timestamps: false,
     });
-    
   }
 
   GetAll() {
