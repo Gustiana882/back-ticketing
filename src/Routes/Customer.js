@@ -16,7 +16,7 @@ route.get('/user', usersMethod.getUser);
 route.get('/my-booking', Booking.getMyBooking);
 route.post('/booking', Booking.BookingTicket);
 
-route.get('/profile', usersMethod.getUserProfile);
+route.get('/profile/:email', usersMethod.getUserProfile);
 route.put('/profile', validate('customer'), usersMethod.updateProfile);
 
 // find ticket
