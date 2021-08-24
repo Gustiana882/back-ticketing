@@ -96,13 +96,9 @@ class Users {
       const { name, email, password } = data;
       const roles = 'customer';
       this.table
-<<<<<<< HEAD
         .create({
           name, email, password, roles,
         })
-=======
-        .create({ name, email, password })
->>>>>>> 902bcbd8fbfaf6aeccaef684c84216cdbd60a155
         .then((res) => {
           resolve({ msg: 'register success' });
         })

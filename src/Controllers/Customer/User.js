@@ -52,7 +52,6 @@ usersMethod.updateProfile = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 usersMethod.getUserProfile = async (req, res) => {
   try {
     const result = await usersModel.getEmail(req.params.email);
@@ -64,19 +63,6 @@ usersMethod.getUserProfile = async (req, res) => {
     response(res, 400, { msg: 'email not found' });
   }
 };
-=======
-// usersMethod.getUserProfile = async (req, res) => {
-//   try {
-//     const result = await usersModel.getEmail(token.params.email);
-//     result
-//       ? response(res, 200, result)
-//       : response(res, 400, { msg: 'email not found' });
-//   } catch (error) {
-//     console.log(error);
-//     response(res, 400, { msg: 'email not found' });
-//   }
-// };
->>>>>>> 902bcbd8fbfaf6aeccaef684c84216cdbd60a155
 
 usersMethod.getUser = async (req, res) => {
   try {

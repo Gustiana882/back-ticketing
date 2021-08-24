@@ -157,11 +157,7 @@ class Schedule {
           model: destination.table,
           as: 'tujuanAkhir',
           where: {
-<<<<<<< HEAD
             negara: to,
-=======
-            kota: req_kota_akhir,
->>>>>>> 902bcbd8fbfaf6aeccaef684c84216cdbd60a155
           },
         }, {
           model: maskapai.table,
