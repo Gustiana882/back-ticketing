@@ -138,7 +138,7 @@ class Schedule {
     });
   }
 
-  FindTicket(req_kota_awal, req_kota_akhir, clas) {
+  FindTicket(from, to, clas) {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
@@ -149,13 +149,13 @@ class Schedule {
           model: destination.table,
           as: 'tujuanAwal',
           where: {
-            kota: req_kota_awal,
+            negara: from,
           },
         }, {
           model: destination.table,
           as: 'tujuanAkhir',
           where: {
-            kota: req_kota_awal,
+            negara: to,
           },
         }, {
           model: maskapai.table,
