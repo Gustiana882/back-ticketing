@@ -91,7 +91,7 @@ controler.getMyBooking = async (req, res) => {
       return obj;
     });
     if (result) {
-      response(res, 200, [{ ...detail[0], ...schedules[0].dataValues }]);
+      response(res, 200, [{ ...detail[0], ...schedules[0] }]);
     }
   } catch (error) {
     response(res, 400, { msg: error }, true);
