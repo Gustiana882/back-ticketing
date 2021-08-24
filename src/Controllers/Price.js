@@ -7,7 +7,6 @@ priceMethod.getPriceById = async (req, res) => {
     const result = await priceModel.getId(req.query.id);
     return response(res, 200, result);
   } catch (error) {
-    console.log(error);
     return response(res, 400, error);
   }
 };
@@ -17,7 +16,6 @@ priceMethod.getPriceByIdMaskapai = async (req, res) => {
     const result = await priceModel.getId(req.body.idMaskapai);
     return response(res, 200, result);
   } catch (error) {
-    console.log(error);
     return response(res, 400, error);
   }
 };
@@ -27,7 +25,6 @@ priceMethod.getPriceByClass = async (req, res) => {
     const result = await priceModel.getClass(req.query.class_type);
     return response(res, 200, result);
   } catch (error) {
-    console.log(error);
     return response(res, 400, error);
   }
 };
@@ -43,7 +40,6 @@ priceMethod.addPriceMaskapai = async (req, res) => {
     const result = await priceModel.addPrice(data);
     return response(res, 200, result);
   } catch (error) {
-    console.log(error);
     return response(res, 400, error);
   }
 };
@@ -60,7 +56,6 @@ priceMethod.updatePriceById = async (req, res) => {
     const result = await priceModel.updatePrice(data);
     return response(res, 200, result);
   } catch (error) {
-    console.log(error);
     return response(res, 400, error);
   }
 };

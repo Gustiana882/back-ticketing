@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+
 function respon(res, status, result = '', err = false) {
   let desc = '';
 
@@ -38,7 +40,7 @@ function respon(res, status, result = '', err = false) {
 
   const results = {};
 
-  if (err == true) {
+  if (err === true) {
     results.status = status;
     results.description = desc;
     results.isError = true;

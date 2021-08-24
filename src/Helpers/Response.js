@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+
 function respon(res, status, result = '', err = false) {
   let desc = '';
 
@@ -38,15 +40,11 @@ function respon(res, status, result = '', err = false) {
 
   const results = {};
 
-  if (err == true) {
+  if (err === true) {
     results.status = status;
     results.description = desc;
     results.isError = true;
-    results.result = isObject(result)
-      ? [result]
-      : Array.isArray(result)
-        ? result
-        : result;
+    results.result = isObject(result) ? [result] : Array.isArray(result) ? result : result;
   } else {
     results.status = status;
     results.description = desc;

@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-catch */
+
 const { uploader } = require('../Config/cloudinary');
 
 async function uploads(pathFile) {

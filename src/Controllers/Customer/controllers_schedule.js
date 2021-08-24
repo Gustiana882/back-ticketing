@@ -16,7 +16,6 @@ schedule.getByID = async (req, res) => {
     const result = await model.GetbyID(req.params.id_schedule);
     return respone(res, 200, result);
   } catch (error) {
-    console.log(error);
     return respone(res, 500, error);
   }
 };
@@ -26,7 +25,6 @@ schedule.findTicket = async (req, res) => {
     const result = await model.FindTicket(req.query.from, req.query.to, req.query.Class);
     return respone(res, 200, result);
   } catch (error) {
-    console.log(error);
     return respone(res, 500, error);
   }
 };
