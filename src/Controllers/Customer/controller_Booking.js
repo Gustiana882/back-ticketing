@@ -90,8 +90,9 @@ controler.getMyBooking = async (req, res) => {
       };
       return obj;
     });
+    const data = JSON.stringify(schedules);
     if (result) {
-      response(res, 200, [{ ...detail[0], ...schedules[0] }]);
+      response(res, 200, [{ ...detail[0], ...JSON.parse(data)[0] }]);
     }
   } catch (error) {
     response(res, 400, { msg: error }, true);
