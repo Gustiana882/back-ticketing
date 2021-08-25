@@ -2,7 +2,7 @@
 /* eslint-disable consistent-return */
 const response = require('../../Helpers/StandarRespon');
 const model = require('../../Models/models_booking');
-const schedule = require('../../Models/models_schedule');
+// const schedule = require('../../Models/models_schedule');
 const valid = require('../../Helpers/NullValidation');
 const decode = require('../../Helpers/DecodeToken');
 
@@ -72,29 +72,11 @@ controler.getMyBooking = async (req, res) => {
   try {
     const token = await decode(req.headers.token);
     const result = await model.getMyBookingByEmailUser(token.user);
-    const schedules = await schedule.GetbyID(result[0].idSchedule);
-    const detail = result.map((data) => {
-      const obj = {
-        id: data.id,
-        emailUser: data.emailPerson,
-        namePerson: data.namePassenger,
-        emailPerson: data.emailPerson,
-        phonePerson: data.phonePerson,
-        namePassenger: data.namePassenger,
-        nationality: data.nationality,
-        totalPrice: data.totalPrice,
-        insurance: data.insurance,
-        statusPaymen: data.statusPaymen,
-        createdAt: data.createdAt,
-        updatedAt: data.updatedAt,
-      };
-      return obj;
-    });
     if (result) {
-      response(res, 200, [{ ...detail[0], ...schedules[0] }]);
+      response(res, 200, [result]);
     }
   } catch (error) {
-    response(res, 400, { msg: error }, true);
+    response(res, 400, { msg: error.message }, true);
   }
 };
 

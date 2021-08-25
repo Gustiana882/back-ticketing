@@ -1,6 +1,10 @@
 const { DataTypes } = require('sequelize');
 const db = require('../Config/dbConnec');
 const schedule = require('./models_schedule');
+const destination = require('./models_destination');
+const maskapai = require('./models_maskapai');
+const time = require('./models_time');
+const price = require('./price');
 
 class Booking {
   constructor() {
@@ -14,6 +18,11 @@ class Booking {
       idSchedule: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'schedules',
+          key: 'id',
+        },
       },
       emailUser: {
         type: DataTypes.STRING,
@@ -51,6 +60,10 @@ class Booking {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
+    });
+    this.table.belongsTo(schedule.table, {
+      foreignKey: 'idSchedule',
+      as: 'schedule',
     });
   }
 
@@ -119,6 +132,26 @@ class Booking {
     return new Promise((resolve, reject) => {
       this.table.findAll({
         order: [['id', 'DESC']],
+        include: [{
+          model: schedule.table,
+          as: 'schedule',
+          include: [{
+            model: destination.table,
+            as: 'tujuanAwal',
+          }, {
+            model: destination.table,
+            as: 'tujuanAkhir',
+          }, {
+            model: maskapai.table,
+            as: 'Maskapai',
+          }, {
+            model: time.table,
+            as: 'times',
+          }, {
+            model: price.table,
+            as: 'price',
+          }],
+        }],
         where: {
           emailUser,
         },

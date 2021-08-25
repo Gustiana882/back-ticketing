@@ -22,6 +22,9 @@ schedule.getByID = async (req, res) => {
 
 schedule.findTicket = async (req, res) => {
   try {
+    console.log(req.query.from)
+    console.log(req.query.to)
+    console.log(req.query.Class)
     const result = await model.FindTicket(req.query.from, req.query.to, req.query.Class);
     return respone(res, 200, result);
   } catch (error) {
