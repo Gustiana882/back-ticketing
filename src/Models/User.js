@@ -93,11 +93,11 @@ class Users {
 
   addUser(data) {
     return new Promise((resolve, reject) => {
-      const { name, email, password } = data;
+      const { name, email, password, image } = data;
       const roles = 'customer';
       this.table
         .create({
-          name, email, password, roles,
+          name, email, password, roles, image,
         })
         .then((res) => {
           resolve({ msg: 'register success' });

@@ -11,9 +11,11 @@ const hash = require('../../Helpers/Hash');
 
 usersMethod.registerUser = async (req, res) => {
   try {
+    const defaultImage = 'https://res.cloudinary.com/calvin-cloud/image/upload/v1626501995/users/user_meodkb.png';
     const check = await usersModel.getEmail(req.body.email);
     const hashedPass = await hash(req.body.password);
     const data = {
+      image: defaultImage,
       name: req.body.name,
       email: req.body.email,
       password: hashedPass,
