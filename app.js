@@ -9,6 +9,6 @@ server.use(cors());
 server.use('/api/public', express.static('public'));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
-server.use('/', main);
+server.use('/api/', main);
 
 module.exports = server;
