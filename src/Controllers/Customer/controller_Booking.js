@@ -73,7 +73,7 @@ controler.getMyBooking = async (req, res) => {
     const token = await decode(req.headers.token);
     const result = await model.getMyBookingByEmailUser(token.user);
     if (result) {
-      response(res, 200, [result]);
+      response(res, 200, result);
     }
   } catch (error) {
     response(res, 400, { msg: error.message }, true);
