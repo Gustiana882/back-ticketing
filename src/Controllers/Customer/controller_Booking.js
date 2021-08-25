@@ -37,7 +37,12 @@ controler.BookingTicket = async (req, res) => {
       return response(res, 200, { message: 'name passenger not null' }, true);
     }
     if (valid(nationality)) {
-      return response(res, 200, { message: 'nationality pasenger not null' }, true);
+      return response(
+        res,
+        200,
+        { message: 'nationality pasenger not null' },
+        true
+      );
     }
     if (valid(totalPrice)) {
       return response(res, 200, { message: 'price not null' }, true);
@@ -91,7 +96,7 @@ controler.getMyBooking = async (req, res) => {
       return obj;
     });
     if (result) {
-      response(res, 200, [{ ...detail[0], ...schedules[0].dataValues }]);
+      response(res, 200, [{ ...detail[0], ...schedules[0] }]);
     }
   } catch (error) {
     response(res, 400, { msg: error }, true);
