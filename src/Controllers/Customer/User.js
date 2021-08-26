@@ -1,13 +1,9 @@
-/* eslint-disable consistent-return */
 /* eslint-disable no-unused-expressions */
 const usersMethod = {};
-// const bcrypt = require('bcrypt');
-// const jwt = require('jsonwebtoken');
 const usersModel = require('../../Models/User');
 const response = require('../../Helpers/Response');
 const uploads = require('../../Helpers/UploadCloud');
 const hash = require('../../Helpers/Hash');
-// const decode = require('../../Helpers/DecodeToken');
 
 usersMethod.registerUser = async (req, res) => {
   try {
@@ -24,6 +20,7 @@ usersMethod.registerUser = async (req, res) => {
       return response(res, 200, { msg: 'email already registered' });
     }
     const result = await usersModel.addUser(data);
+    console.log(data);
     response(res, 200, result);
   } catch (error) {
     response(res, 400, error);
@@ -32,13 +29,14 @@ usersMethod.registerUser = async (req, res) => {
 
 usersMethod.updateProfile = async (req, res) => {
   try {
-    let urlImage = 'https://res.cloudinary.com/calvin-cloud/image/upload/v1626501995/users/user_meodkb.png';
+    let defaultImage =
+      'https://res.cloudinary.com/calvin-cloud/image/upload/v1626501995/users/user_meodkb.png';
     if (req.file !== undefined) {
       urlImage = await uploads(req.file.path);
     }
-    const object = await (req.body);
+    const object = await req.body;
     const data = {
-      image: urlImage || req.file.path,
+      image: urlImage || defaultImage,
       id: object.id,
       name: object.name,
       email: object.email,
@@ -48,8 +46,10 @@ usersMethod.updateProfile = async (req, res) => {
       postcode: object.postcode,
     };
     const result = await usersModel.update(data);
+    console.log(result);
     response(res, 200, result);
   } catch (error) {
+    console.log(error);
     response(res, 400, error);
   }
 };

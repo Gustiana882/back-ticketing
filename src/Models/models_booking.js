@@ -60,6 +60,14 @@ class Booking {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
+      createdAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
     });
     this.table.belongsTo(schedule.table, {
       foreignKey: 'idSchedule',
@@ -69,9 +77,10 @@ class Booking {
 
   getAll() {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+        })
         .then((result) => resolve(result))
         .catch((error) => reject(error));
     });
@@ -79,16 +88,19 @@ class Booking {
 
   getMyBookingById(id) {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-        where: {
-          id,
-        },
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+          where: {
+            id,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -96,16 +108,20 @@ class Booking {
 
   getHistory() {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+        })
         .then((res) => {
           resolve(res);
-        }).catch((err) => {
+        })
+        .catch((err) => {
           reject(err.message);
         });
     });
@@ -113,16 +129,19 @@ class Booking {
 
   getBookingByStatusPay(status) {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-        where: {
-          statusPaymen: status,
-        },
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+          where: {
+            statusPaymen: status,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -163,16 +182,19 @@ class Booking {
 
   getMyBookingByArrive(arrive) {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-        where: {
-          arrive,
-        },
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+          where: {
+            arrive,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -180,16 +202,19 @@ class Booking {
 
   getMyBookingByDeparture(departure) {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-        where: {
-          departure,
-        },
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+          where: {
+            departure,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -197,16 +222,19 @@ class Booking {
 
   getMyBookingByTransit(transit) {
     return new Promise((resolve, reject) => {
-      this.table.findAll({
-        order: [['id', 'DESC']],
-        include: [{
-          model: schedule.table,
-          as: 'schedule',
-        }],
-        where: {
-          transit,
-        },
-      })
+      this.table
+        .findAll({
+          order: [['id', 'DESC']],
+          include: [
+            {
+              model: schedule.table,
+              as: 'schedule',
+            },
+          ],
+          where: {
+            transit,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -214,7 +242,8 @@ class Booking {
 
   addMyBooking(data) {
     return new Promise((resolve, reject) => {
-      this.table.create(data)
+      this.table
+        .create(data)
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -222,11 +251,12 @@ class Booking {
 
   updateMyBooking(data) {
     return new Promise((resolve, reject) => {
-      this.table.update(data, {
-        where: {
-          id: data.id,
-        },
-      })
+      this.table
+        .update(data, {
+          where: {
+            id: data.id,
+          },
+        })
         .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
@@ -234,11 +264,13 @@ class Booking {
 
   deleteMyBooking(id) {
     return new Promise((resolve, reject) => {
-      this.table.destroy({
-        where: {
-          id,
-        },
-      }).then((res) => resolve(res))
+      this.table
+        .destroy({
+          where: {
+            id,
+          },
+        })
+        .then((res) => resolve(res))
         .catch((err) => reject(err));
     });
   }

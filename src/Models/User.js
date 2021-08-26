@@ -93,7 +93,9 @@ class Users {
 
   addUser(data) {
     return new Promise((resolve, reject) => {
-      const { name, email, password, image } = data;
+      const {
+        name, email, password, image,
+      } = data;
       const roles = 'customer';
       this.table
         .create({
