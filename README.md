@@ -1,5 +1,5 @@
 <h1 align="center">
-  App Ticketing
+  Backend Ticketing
 </h1>
 
 <p align="center"><img src="https://www.arkademy.com/img/logo%20arkademy.1c82cf5c.svg" width="500px" alt="Arkademylogo.svg" /></p>
