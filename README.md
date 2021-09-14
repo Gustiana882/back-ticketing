@@ -1,14 +1,17 @@
-<h1 align="center">
-  Backend Ticketing
-</h1>
-
-<p align="center"><img src="https://www.arkademy.com/img/logo%20arkademy.1c82cf5c.svg" width="500px" alt="Arkademylogo.svg" /></p>
-
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-    <a href="https://www.arkademy.com/" target="blank">Our Website</a>
-    ·
-    <a href="https://www.arkademy.com/auth/signup">Join With Us</a>
-    ·
+  <a href="https://github.com/calvinrahmat/blanja.git">
+    <img src="https://res.cloudinary.com/calvin-cloud/image/upload/v1631588597/Ankasa/Logo_Ankasa_cm4gp9.svg"  alt="LogoAnkasa">
+  </a>
+
+  <p align="center">
+    <br />
+    <a href="https://github.com/calvinrahmat/back-ticketing.git"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="http://ankasa.online/">View Demo</a>
+  </p>
 </p>
 
 ## Clone the repository
