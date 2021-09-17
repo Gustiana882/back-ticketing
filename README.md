@@ -6,13 +6,20 @@
   </a>
 
   <p align="center">
-    <br />
-    <a href="https://github.com/calvinrahmat/back-ticketing.git"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="http://www.ankasa.online/">View Demo</a>
-  </p>
+    <a href="http://www.ankasa.online/" target="blank">View Demo</a>
+  · <a href="https://github.com/Gustiana882/back-ticketing/issues">Report Bug</a>
+  · <a href="https://github.com/Gustiana882/back-ticketing/pulls">Request Feature</a>
 </p>
+</p>
+
+
+## 💻 Built with
+
+[![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html)
+[![Node.js](https://img.shields.io/badge/Node.js-v.12.13-green.svg?style=rounded-square)](https://nodejs.org/)
+[![npm version](https://img.shields.io/npm/v/@bigcommerce/big-design-icons.svg?style=flat)](https://www.npmjs.com/package/@bigcommerce/big-design)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v.13.3-blue.svg?style=rounded-square)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-v.6.2-red.svg?style=rounded-square)](https://redis.io/)
 
 ## Back to Frontend
 
