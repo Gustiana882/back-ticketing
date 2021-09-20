@@ -6,7 +6,7 @@
   </a>
 
   <p align="center">
-    <a href="http://www.ankasa.online/" target="blank">View Demo</a>
+    <a href="https://ankasa.glitch.me/home" target="blank">View Demo</a>
   · <a href="https://github.com/Gustiana882/back-ticketing/issues">Report Bug</a>
   · <a href="https://github.com/Gustiana882/back-ticketing/pulls">Request Feature</a>
 </p>
