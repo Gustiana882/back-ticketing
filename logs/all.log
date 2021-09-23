@@ -9602,3 +9602,9 @@
 [34m[39m
 2021-09-10 13:22:12:2212 [34mhttp[39m: [34mGET /destination/all 304 - - 28.556 ms[39m
 [34m[39m
+2021-09-23 13:05:09:59 [34mhttp[39m: [34mGET /admin/destination/all 400 98 - 148.666 ms[39m
+[34m[39m
+2021-09-23 13:05:10:510 [34mhttp[39m: [34mGET /favicon.ico 404 17 - 21.686 ms[39m
+[34m[39m
+2021-09-23 13:07:20:720 [34mhttp[39m: [34mGET /admin/destination/all 200 45 - 515.951 ms[39m
+[34m[39m

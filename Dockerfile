@@ -12,4 +12,4 @@ RUN yarn add nodemon
 
 EXPOSE 9000
 
-CMD [ "npm" , "start" ]
+CMD [ "yarn" , "start" ]
