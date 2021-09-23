@@ -44,6 +44,7 @@ pipeline {
                 script{
                     builderImage.push()
                 }
+                sh "docker image prune -f"
             }
         }
 

@@ -10,6 +10,6 @@ COPY . .
 
 RUN yarn add nodemon
 
-EXPOSE 9000
+EXPOSE 8000
 
 CMD [ "yarn" , "start" ]
