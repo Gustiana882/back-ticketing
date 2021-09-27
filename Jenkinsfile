@@ -48,14 +48,6 @@ pipeline {
         //         sh "docker image prune -f"
         //     }
         // }
-        stage('Development') {
-           if (env.BRANCH_NAME ==~ /(development)/){
-             steps {
-                echo 'Deploying'
-            }
-           }
-           
-        }
         
         stage('production') {
             when {
