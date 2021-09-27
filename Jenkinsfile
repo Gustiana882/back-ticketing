@@ -54,12 +54,12 @@ pipeline {
                     sshPublisher(
                         publishers: [
                             sshPublisherDesc(
-                                configName: 'devops',
+                                configName: 'devopsback',
                                 verbose: false,
                                 transfers: [
                                     sshTransfer(
                                         sourceFiles: "backendv2.yml",
-                                        execCommand: "cd /home/devops/frontend; sudo kubectl apply -f backendv2.yml",
+                                        execCommand: "cd /home/devops/backend; sudo kubectl apply -f backendv2.yml",
                                         execTimeout: 120000,
                                     )
                                 ]
