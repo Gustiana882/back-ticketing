@@ -58,8 +58,8 @@ pipeline {
                                 verbose: false,
                                 transfers: [
                                     sshTransfer(
-                                        sourcefiles: "backendv2.yml",
-                                        execCommand: "cd /home/devops/deploy; sudo kubectl apply -f backendv2.yml",
+                                        sourceFiles: "backendv2.yml",
+                                        execCommand: "cd /home/devops/frontend; sudo kubectl apply -f backendv2.yml",
                                         execTimeout: 120000,
                                     )
                                 ]
