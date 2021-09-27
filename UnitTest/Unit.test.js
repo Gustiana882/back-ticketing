@@ -36,7 +36,7 @@ const createDataBase = async () => {
 
 beforeAll(async () => {
   await createDataBase();
-});
+}, 30000);
 
 describe('service register customer', () => {
   test('should return register success', async () => {
@@ -47,7 +47,7 @@ describe('service register customer', () => {
     });
     expect(result.body.result[0].msg).toEqual(expect.stringContaining('register success'));
     expect(result.statusCode).toBe(200);
-  });
+  }, 30000);
 
   test('should return register gagal e-mail already registered', async () => {
     const result = await requests(app).post('/register').send({
@@ -57,7 +57,7 @@ describe('service register customer', () => {
     });
     expect(result.statusCode).toBe(200);
     expect(result.body.result[0].msg).toEqual(expect.stringContaining('email already registered'));
-  });
+  }, 30000);
 });
 
 const formLoginCustomer = {
@@ -76,7 +76,7 @@ describe('service login customer', () => {
     expect(result.body).toEqual(expect.objectContaining(standarResponse));
     expect(result.body.result[0].msg).toEqual(expect.stringContaining('Login Success'));
     expect(result.body.result[0].token).toEqual(expect.stringContaining('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9'));
-  });
+  }, 30000);
 });
 
 const standarCustomerProfile = {

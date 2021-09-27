@@ -9,7 +9,8 @@ const validate = require('./middleware/validate');
 route.use('*', cloudConfig);
 
 route.use('/', customer);
-route.use('/admin', validate('admin'), admin);
+route.use('/admin', admin);
+// route.use('/admin', validate('admin'), admin);
 
 route.use('*', (req, res) => {
   res.status(404).json('page not found!');

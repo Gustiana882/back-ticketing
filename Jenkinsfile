@@ -49,11 +49,6 @@ pipeline {
         }
         
         stage('production') {
-            when {
-                expression {
-                     branch 'production'
-                }
-            }
             steps {               
                 script {
                     sshPublisher(

@@ -12,12 +12,12 @@ const sequelize = require('../../src/Config/dbConnec');
 // };
 
 const createDataBase = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ alter: true });
 };
 
 beforeAll(async () => {
   await createDataBase();
-});
+}, 30000);
 
 describe('service admin destination', () => {
   test('get all destination should return status code 200', async () => {
