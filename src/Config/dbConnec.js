@@ -1,10 +1,23 @@
-const { Sequelize } = require('sequelize')
+const { Sequelize } = require('sequelize');
+
+// const db = new Sequelize({
+//   username: process.env.PGUSER,
+//   database: process.env.PGDATABASE,
+//   password: process.env.PGPASSWORD,
+//   host: process.env.PGHOST,
+//   dialect: 'postgres',
+//   logging: false,
+// });
+
 const db = new Sequelize({
-    username: 'devops',
-    database: 'express',
-    password: 'admin123',
-    host: 'localhost',
-    dialect: 'postgres',
+  host: '0.0.0.0',
+  dialect: 'sqlite',
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 1000,
+  },
+  storage: 'data/database.sqlite',
 });
 
-module.exports = db
+module.exports = db;
