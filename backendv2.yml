@@ -1,0 +1,64 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: example
+
+---
+apiVersion: v1
+data:
+  DB_USERS: 'postgres'
+  DB_HOST: '3.19.173.182'
+  DB_NAME: 'express'
+  DB_PASS: 'admin123'
+
+kind: ConfigMap
+metadata:
+  name: test-service
+  namespace: example
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-service
+  namespace: example
+spec:
+  selector:
+    matchLabels:
+      app: user-services
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: user-services
+    spec:
+      containers:
+        - name: user-service
+          image: wsaefulloh/coba_backend_ankasa:devs
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: test-service
+
+# kubectl describe deployment.testservice -n test
+# kubectl logs -f deployment.testservice -n test
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+  namespace: example
+  labels:
+    app: user-services
+spec:
+  selector:
+    app: user-services
+  # type: LoadBalancer
+  type: ClusterIP
+  ports:
+    - port: 8081
+      targetPort: 8000
+      protocol: TCP
+      name: serviceport

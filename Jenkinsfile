@@ -48,26 +48,27 @@ pipeline {
             }
         }
 
-        // stage('Deployment') {
-        //     steps {
-        //         script {
-        //             sshPublisher(
-        //                 publishers: [
-        //                     sshPublisherDesc(
-        //                         configName: 'prod',
-        //                         verbose: false,
-        //                         transfers: [
-        //                             sshTransfer(
-        //                                 execCommand: "cd /home/ubuntu/prod/back; docker-compose up -d",
-        //                                 execTimeout: 120000,
-        //                             )
-        //                         ]
-        //                     )
-        //                 ]
-        //             )
-        //         }
-        //     }
-        // }
+        stage('Deployment') {
+            steps {
+                script {
+                    sshPublisher(
+                        publishers: [
+                            sshPublisherDesc(
+                                configName: 'devops',
+                                verbose: false,
+                                transfers: [
+                                    sshTransfer(
+                                        sourcefiles: "backendv2.yml"
+                                        execCommand: "cd /home/devops/deploy; sudo kubectl apply -f backendv2.yml",
+                                        execTimeout: 120000,
+                                    )
+                                ]
+                            )
+                        ]
+                    )
+                }
+            }
+        }
 
         // stage('Deployment') {
         //     steps {
