@@ -47,40 +47,38 @@ pipeline {
                 sh "docker image prune -f"
             }
         }
+        stage('Development') {
+            when {
+                branch 'development'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+        
 
-         stages {
-            stage('Development') {
-                when {
-                    branch 'development'
-                }
-                steps {
-                    echo 'Deploying'
+        stage('Deployment') {
+            steps {
+                when { branch 'production' }
+                script {
+                    sshPublisher(
+                        publishers: [
+                            sshPublisherDesc(
+                                configName: 'devopsback',
+                                verbose: false,
+                                transfers: [
+                                    sshTransfer(
+                                        sourceFiles: "backendv2.yml",
+                                        execCommand: "cd /home/devops/backend; sudo kubectl apply -f backendv2.yml",
+                                        execTimeout: 120000,
+                                    )
+                                ]
+                            )
+                        ]
+                    )
                 }
             }
         }
-
-        // stage('Deployment') {
-        //     steps {
-        //         when { branch 'production' }
-        //         script {
-        //             sshPublisher(
-        //                 publishers: [
-        //                     sshPublisherDesc(
-        //                         configName: 'devopsback',
-        //                         verbose: false,
-        //                         transfers: [
-        //                             sshTransfer(
-        //                                 sourceFiles: "backendv2.yml",
-        //                                 execCommand: "cd /home/devops/backend; sudo kubectl apply -f backendv2.yml",
-        //                                 execTimeout: 120000,
-        //                             )
-        //                         ]
-        //                     )
-        //                 ]
-        //             )
-        //         }
-        //     }
-        // }
 
         // stage('Deployment') {
         //     steps {
