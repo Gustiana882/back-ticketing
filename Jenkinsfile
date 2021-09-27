@@ -60,12 +60,12 @@ pipeline {
         
 
         stage('Deployment') {
-            steps {
-               when {
+            when {
                 expression {
                      branch 'production'
                 }
             }
+            steps {               
                 script {
                     sshPublisher(
                         publishers: [
