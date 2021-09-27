@@ -48,8 +48,10 @@ pipeline {
         //     }
         // }
         stage('Development') {
-            when {
-                branch 'development'
+           when {
+                expression {
+                     branch 'development'
+                }
             }
             steps {
                 echo 'Deploying'
@@ -59,9 +61,11 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                when { 
-                    branch 'production' 
+               when {
+                expression {
+                     branch 'production'
                 }
+            }
                 script {
                     sshPublisher(
                         publishers: [
