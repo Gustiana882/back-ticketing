@@ -5,51 +5,63 @@ pipeline {
     agent any
 
     stages {
-        // stage('Installing package') {
-        //     steps {
-        //         nodejs("node14"){
-        //             sh 'yarn install'
-        //         }
-        //     }
-        // }
+        stage('Installing package') {
+            steps {
+                nodejs("node14"){
+                    sh 'yarn install'
+                }
+            }
+        }
 
-        // stage('Running Test') {
-        //     steps {
-        //         nodejs("node14"){
-        //             sh 'yarn run test'
-        //         }
-        //     }
-        // }
+        stage('Running Test') {
+            steps {
+                nodejs("node14"){
+                    sh 'yarn run test'
+                }
+            }
+        }
 
-        // stage('Build Image') {
-        //     steps {
-        //         script{
-        //             builderImage = docker.build("${imageName}")
-        //         }
-        //     }
-        // }
+        stage('Build Image') {
+            steps {
+                script{
+                    builderImage = docker.build("${imageName}")
+                }
+            }
+        }
 
-        // stage('Test Image') {
-        //     steps {
-        //         script{
-        //             builderImage.inside {
-        //                 sh "echo 'pass'"
-        //             }
-        //         }
-        //     }
-        // }
+        stage('Test Image') {
+            steps {
+                script{
+                    builderImage.inside {
+                        sh "echo 'pass'"
+                    }
+                }
+            }
+        }
 
-        // stage('Push Image') {
-        //     steps {
-        //         script{
-        //             builderImage.push()
-        //         }
-        //         sh "docker image prune -f"
-        //     }
-        // }
+        stage('Push Image') {
+            steps {
+                script{
+                    builderImage.push()
+                }
+                sh "docker image prune -f"
+            }
+        }
+
+         stages {
+            stage('Development') {
+                when {
+                    branch 'development'
+                }
+                steps {
+                    echo 'Deploying'
+                }
+            }
+        }
 
         stage('Deployment') {
             steps {
+                when { branch 'production' }
                 script {
                     sshPublisher(
                         publishers: [
