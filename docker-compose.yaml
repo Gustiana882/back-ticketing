@@ -5,7 +5,7 @@ services:
     networks:
       - devops
     ports:
-      - "9000:9000"
+      - "9000:8000"
 
 networks:
   devops:
