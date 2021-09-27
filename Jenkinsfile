@@ -3,6 +3,7 @@ def imageName = "wsaefulloh/coba_backend_ankasa:devs"
 
 pipeline {
     agent any
+      environment {}
 
     stages {
         // stage('Installing package') {
@@ -48,17 +49,14 @@ pipeline {
         //     }
         // }
         stage('Development') {
-           when {
-                expression {
-                     branch 'development'
-                }
-            }
-            steps {
+           if (env.BRANCH_NAME ==~ /(development)/){
+             steps {
                 echo 'Deploying'
             }
+           }
+           
         }
         
-
         stage('production') {
             when {
                 expression {
