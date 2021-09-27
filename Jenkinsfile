@@ -48,32 +48,12 @@ pipeline {
         //     }
         // }
         
-        stage('production') {
-            when {
-                expression {
-                     branch 'production'
+        stage('Running Image') {
+            steps {
+                sh "cd /var/lib/jenkins/workspace/'backend' ; docker-compose up -d"
                 }
-            }
-            steps {               
-                script {
-                    sshPublisher(
-                        publishers: [
-                            sshPublisherDesc(
-                                configName: 'devopsback',
-                                verbose: false,
-                                transfers: [
-                                    sshTransfer(
-                                        sourceFiles: "backendv2.yml",
-                                        execCommand: "cd /home/devops/backend; sudo kubectl apply -f backendv2.yml",
-                                        execTimeout: 120000,
-                                    )
-                                ]
-                            )
-                        ]
-                    )
-                }
-            }
         }
+    
 
         // stage('Deployment') {
         //     steps {

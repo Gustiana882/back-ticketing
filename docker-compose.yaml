@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  expressjs:
+    image: wsaefulloh/coba_backend_ankasa:devs
+    networks:
+      - devops
+    ports:
+      - "9000:9000"
+
+networks:
+  devops:
