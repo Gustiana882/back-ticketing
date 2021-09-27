@@ -3,7 +3,6 @@ def imageName = "wsaefulloh/coba_backend_ankasa:devs"
 
 pipeline {
     agent any
-      environment {}
 
     stages {
         // stage('Installing package') {
