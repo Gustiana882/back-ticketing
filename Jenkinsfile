@@ -59,7 +59,7 @@ pipeline {
         }
         
 
-        stage('Deployment') {
+        stage('production') {
             when {
                 expression {
                      branch 'production'
