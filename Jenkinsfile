@@ -13,13 +13,13 @@ pipeline {
             }
         }
 
-        // stage('Running Test') {
-        //     steps {
-        //         nodejs("node14"){
-        //             sh 'yarn run test'
-        //         }
-        //     }
-        // }
+        stage('Running Test') {
+            steps {
+                nodejs("node14"){
+                    sh 'yarn run test'
+                }
+            }
+        }
 
         stage('Build Image') {
             steps {
