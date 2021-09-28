@@ -31,7 +31,7 @@ const standarResponse = {
 };
 
 const createDataBase = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ alter: true });
 };
 
 beforeAll(async () => {
