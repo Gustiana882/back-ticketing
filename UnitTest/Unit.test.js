@@ -39,15 +39,15 @@ beforeAll(async () => {
 }, 30000);
 
 describe('service register customer', () => {
-  test('should return register success', async () => {
-    const result = await requests(app).post('/register').send({
-      name: formRegisterCustomer.name,
-      email: formRegisterCustomer.email,
-      password: formRegisterCustomer.password,
-    });
-    expect(result.body.result[0].msg).toEqual(expect.stringContaining('register success'));
-    expect(result.statusCode).toBe(200);
-  }, 30000);
+  // test('should return register success', async () => {
+  //   const result = await requests(app).post('/register').send({
+  //     name: formRegisterCustomer.name,
+  //     email: formRegisterCustomer.email,
+  //     password: formRegisterCustomer.password,
+  //   });
+  //   expect(result.body.result[0].msg).toEqual(expect.stringContaining('register success'));
+  //   expect(result.statusCode).toBe(200);
+  // }, 30000);
 
   test('should return register gagal e-mail already registered', async () => {
     const result = await requests(app).post('/register').send({
