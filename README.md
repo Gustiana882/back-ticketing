@@ -6,7 +6,7 @@
   </a>
 
   <p align="center">
-    <a href="https://ankasa.glitch.me/home" target="blank">View Demo</a>
+    <a href="https://ankasa.online/" target="blank">View Demo</a>
   · <a href="https://github.com/Gustiana882/back-ticketing/issues">Report Bug</a>
   · <a href="https://github.com/Gustiana882/back-ticketing/pulls">Request Feature</a>
 </p>
@@ -21,9 +21,6 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-v.13.3-blue.svg?style=rounded-square)](https://www.postgresql.org/)
 [![Redis](https://img.shields.io/badge/Redis-v.6.2-red.svg?style=rounded-square)](https://redis.io/)
 
-## Back to Frontend
-
-<a href="https://github.com/Gustiana882/front-ticketing">https://github.com/Gustiana882/front-ticketing</a>
 
 ## Clone the repository
 
@@ -150,3 +147,8 @@ You will also see any lint errors in the console.
   }
 ]
 ```
+
+
+## Back to Frontend
+
+<a href="https://github.com/Gustiana882/front-ticketing">https://github.com/Gustiana882/front-ticketing</a>
