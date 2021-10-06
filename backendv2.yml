@@ -5,19 +5,6 @@ metadata:
   name: example
 
 ---
-apiVersion: v1
-data:
-  DB_USERS: 'postgres'
-  DB_HOST: '3.19.173.182'
-  DB_NAME: 'express'
-  DB_PASS: 'admin123'
-
-kind: ConfigMap
-metadata:
-  name: test-service
-  namespace: example
-
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -38,9 +25,6 @@ spec:
           image: wsaefulloh/coba_backend_ankasa:prod
           ports:
             - containerPort: 8000
-          envFrom:
-            - configMapRef:
-                name: test-service
 
 # kubectl describe deployment.testservice -n test
 # kubectl logs -f deployment.testservice -n test
