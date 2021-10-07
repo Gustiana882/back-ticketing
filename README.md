@@ -12,6 +12,8 @@
 </p>
 </p>
 
+## Description
+This is the back-end for Ankasa. The database used on this website is based on PostgreSQL which is operated using sequel. The features available on this website include flight search features, flight filters, and transit filters.
 
 ## 💻 Built with
 
